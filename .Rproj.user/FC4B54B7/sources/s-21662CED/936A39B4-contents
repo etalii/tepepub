@@ -1,0 +1,69 @@
+@Book{xie2015,
+  title = {Dynamic Documents with {R} and knitr},
+  author = {Yihui Xie},
+  publisher = {Chapman and Hall/CRC},
+  address = {Boca Raton, Florida},
+  year = {2015},
+  edition = {2nd},
+  note = {ISBN 978-1498716963},
+  url = {http://yihui.org/knitr/},
+}
+
+@article{seminariopublicacionesdigitalesUnidadParte,
+	title = {Unidad 2. {{Parte}} 3.},
+	author = {{Seminario Publicaciones Digitales}},
+	year = {2021},
+	publisher = {{Facultad de Filosof\'ia y Letras, UBA}}
+}
+
+@misc{seminariopublicacionesdigitalesUnidadParte2021,
+  title = {Unidad 1. {{Parte}} 1.},
+  author = {{Seminario Publicaciones Digitales}},
+  year = {2021},
+  publisher = {{Facultad de Filosof\'ia y Letras, UBA}}
+}
+
+@misc{seminariopublicacionesdigitalesUnidadParte2021a,
+  title = {Unidad 3. {{Parte}} 1.},
+  author = {{Seminario Publicaciones Digitales}},
+  year = {2021},
+  publisher = {{Facultad de Filosof\'ia y Letras, UBA}}
+}
+
+@book{marshallmcluhanComprenderMediosComunicacion1994,
+  title = {Comprender Los Medios de Comunicaci\'on. {{Las}} Extensiones Del Ser Humano},
+  author = {Marshall McLuhan},
+  year = {[1964] 1994},
+  publisher = {{Paid\'os}},
+  address = {{Barcelona}}
+}
+
+@misc{seminariopublicacionesdigitalesUnidad2021,
+  title = {Unidad 4},
+  author = {{Seminario Publicaciones Digitales}},
+  year = {2021},
+  publisher = {{Facultad de Filosof\'ia y Letras, UBA}}
+}
+
+@book{ramiroEdicionDigitalComo2018,
+  title = {Edici\'on Digital Como Metodolog\'ia Para Una Edici\'on Global},
+  author = {Santa Ana Anguiano, Ramiro},
+  year = {2018},
+  publisher = {{Mariana Eguaras}},
+  address = {{Ciudad de M\'exico}}
+}
+
+@book{manovichLenguajeNuevosMedios2006,
+  title = {El Lenguaje de Los Nuevos Medios de Comunicaci\'on. {{La}} Imagen En La Era Digital},
+  author = {Manovich, Lev},
+  year = {2006},
+  publisher = {{Paid\'os}},
+  address = {{Buenos Aires}}
+}
+
+@misc{seminariopublicacionesdigitalesUnidadParte2021b,
+  title = {Unidad 1. {{Parte}} 2.},
+  author = {{Seminario Publicaciones Digitales}},
+  year = {2021},
+  publisher = {{Facultad de Filosof\'ia y Letras, UBA}}
+}

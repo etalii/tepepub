@@ -1,0 +1,18 @@
+h1:componer Componer
+h2:estructura-de-archivos-y-encabezados Estructura de archivos y encabezados
+h2:hoja-de-estilo Hoja de estilo
+h2:zotero-y-better-bibtex-para-las-notas-y-la-bibliografía  y  para las notas y la bibliografía
+h3:demostración-de-cita Demostración de cita
+h3:manejo-de-referencias-cruzadas Manejo de referencias cruzadas
+h2:imágenes-y-formato-de-los-fragmentos-de-código Imágenes y formato de los fragmentos de código
+h3:demostración-fragmento-de-código-de-r-para-imagen-estática-en-todas-las-ediciones-html-pdf-odt-docx-y-md Demostración: fragmento de código de  para imagen estática en todas las ediciones: HTML, PDF, ODT, DOCX y MD
+fig:sample-image (ref:sample-image)
+h3:demostración-fragmento-de-código-de-r-para-iframe-en-html-e-imagen-estática-en-pdf-odt-docx-y-md Demostración: fragmento de código de  para iframe en HTML e imagen estática en PDF, ODT, DOCX y MD
+fig:sample-map (ref:sample-map)
+h3:demostración-fragmento-de-código-de-r-para-gif-animado-en-html-e-imagen-estática-en-pdf-odt-docx-y-md Demostración: fragmento de código de  para GIF animado en HTML e imagen estática en PDF, ODT, DOCX y MD
+fig:sample-gif (ref:sample-gif)
+h3:demostración-fragmento-de-código-de-r-para-incrustar-video-en-html-e-imagen-estática-en-pdf-odt-docx-y-md Demostración: fragmento de código de  para incrustar video en HTML e imagen estática en PDF, ODT, DOCX y MD
+fig:sample-video (ref:sample-video)
+h3:manejo-de-tablas-en-formato-markdown Manejo de tablas en formato 
+tab:left-table Contenido alineado a izquierda. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+

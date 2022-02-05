@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 3 Publishing with Bookdown | tepepub</title>
+  <meta name="description" content="Trabajo final y documentación…" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 3 Publishing with Bookdown | tepepub" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Trabajo final y documentación…" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 3 Publishing with Bookdown | tepepub" />
+  
+  <meta name="twitter:description" content="Trabajo final y documentación…" />
+  
+
+<meta name="author" content="Andrés Lemos" />
+
+
+<meta name="date" content="2022-01-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="methods.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">tepepub</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>3</b> Publishing with Bookdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="bookdown.html"><a href="bookdown.html#bookdown-overview-why-and-how"><i class="fa fa-check"></i>Bookdown Overview: Why and How?</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">tepepub</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bookdown" class="section level1" number="3">
+<h1><span class="header-section-number"> 3</span> Publishing with Bookdown</h1>
+<p>We built this book with free-to-use, open-source tools, primarily <a href="https://bookdown.org">Bookdown</a>, <a href="https://github.com">GitHub</a>, and <a href="https://zotero.org">Zotero</a>. This chapter explains why and how we combined these tools and developed our publishing workflow, so that others can build their own books and share their knowledge about how to improve the process.</p>
+<p>Why not just write the book in a conventional word processor? We desired an efficient workflow to co-author one manuscript that could continuously generate multiple book products for different purposes, as shown in Figure <a href="bookdown.html#fig:workflow">3.1</a>.</p>
+<ul>
+<li>HMTL web edition for the open-access book, with embedded iframes for interactive charts and maps</li>
+<li>PDF print edition with static images and book-style layout</li>
+<li>Microsoft Word edition with static images for editors who prefer to provide feedback this way</li>
+<li>Markdown file of the full-length book with pathnames to static images for easy conversion into the publisher’s platform</li>
+</ul>
+<p>A conventional word processor could not continuously generate all of these products, which likely would have resulted in creating entirely separate files and code for different editions. But with our unified Bookdown workflow, all of our writing is done in one manuscript. Whenever we make edits, we push a couple of buttons to publish our updated book products in the HTML, PDF, MS Word, and Markdown formats.</p>
+
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="bookdown.html#cb4-1" aria-hidden="true" tabindex="-1"></a> knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/20-bookdown/workflow.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:workflow"></span>
+<img src="images/20-bookdown/workflow.png" alt="Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from Daniel Hendricks, RStudio, and Zotero."  />
+<p class="caption">
+Figure 3.1: Simplified workflow to compose, compile, and publish in multiple formats with Bookdown. Images from <a href="https://fileicons.org">Daniel Hendricks</a>, <a href="https://github.com/rstudio/hex-stickers/">RStudio</a>, and <a href="https://www.zotero.org/support/brand">Zotero</a>.
+</p>
+</div>
+<p>Here’s a three-minute video that demonstrates the process:</p>
+
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="bookdown.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(knitr<span class="sc">::</span><span class="fu">is_html_output</span>(<span class="at">excludes=</span><span class="st">&quot;markdown&quot;</span>)) knitr<span class="sc">::</span><span class="fu">include_url</span>(<span class="st">&quot;https://www.youtube.com/embed/8uFABzUG6Lw&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:workflow-video"></span>
+<iframe src="https://www.youtube.com/embed/8uFABzUG6Lw" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 3.2: Short video of our Bookdown workflow. View <a href="https://youtu.be/8uFABzUG6Lw">on YouTube</a>.
+</p>
+</div>
+<div id="bookdown-overview-why-and-how" class="section level3 unnumbered">
+<h3>Bookdown Overview: Why and How?</h3>
+<p>We based our solution around <a href="https://bookdown.org">Bookdown</a>, an open-source package for the <a href="https://www.r-project.org/">R code project</a> created by Yihui Xie at RStudio. Although many people use R for statistical analysis, the free <a href="https://rstudio.com/">RStudio desktop application</a> also supports several innovative publishing solutions. Here’s an overview of our workflow:</p>
+<ul>
+<li>We set up the Bookdown files and composed the manuscript in <a href="https://rmarkdown.rstudio.com">R Markdown</a>, the R-flavored version of the easy-to-write <a href="https://en.wikipedia.org/wiki/Markdown">Markdown syntax</a>. Each chapter consisted of one .Rmd file, with links to static images and interactive visualizations.</li>
+<li>We uploaded our files to a free <a href="https://github.com">GitHub</a> repository, which allows multiple authors to work simultaneously on <em>different</em> chapters of the book and “push” revisions (called commits) to a shared online repository, where authors can view each other’s edits. Alternatively, you could simultaneously write and comment on the <em>same</em> chapter in Google Documents, and use the <a href="https://github.com/evbacher/gd2md-html/wiki">Docs to Markdown add-on</a> to convert one-time into Markdown format, which is similar to R Markdown.</li>
+<li>We organized our sources using the free <a href="https://zotero.org">Zotero bibliography manager</a> by the Roy Rosenzweig Center for History and New Media at George Mason University. Also, we installed the free <a href="https://github.com/retorquere/zotero-better-bibtex">Better BibTeX</a> extension by Emiliano Heynes to create Zotero citation keys that work smoothly with Bookdown.</li>
+<li>After each day’s writing, we used Bookdown to automatically “knit” and compile the book products. Behind the scenes, Bookdown builds the editions using the <a href="https://pandoc.org/">PanDoc</a> universal document converter and the <a href="https://www.latex-project.org">LaTeX</a> document preparation software, without requiring you to learn these complex formats.</li>
+<li>Under our open-access agreement with the publisher, we made our book public as we wrote it to develop our audience and address reader feedback. With each day’s revisions, we rebuilt the book and published all of the editions to our public GitHub repository, and used its free <a href="https://pages.github.com">GitHub Pages</a> feature to host the open-access HTML web edition. (Alternatively, you can choose to keep your GitHub repo private.)</li>
+<li>We hosted our open-access web edition on GitHub using a custom domain name (<a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>), which we purchased and set up through <a href="https://reclaimhosting.com">Reclaim Hosting</a>.</li>
+<li>As we worked on the book manuscript, our developmental editor downloaded the PDF edition from our public GitHub repo to mark up with feedback. (Alternatively, some editors prefer to insert track-changes comments in the MS Word edition.)</li>
+<li>When we were ready to submit the final manuscript, we used Bookdown to create one full-length Markdown file of the entire book, which was compatible with the publisher’s <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">Atlas production platform</a>. However, this was a one-time file conversion, and edits we make to our Bookdown workflow will not appear in the publisher’s platform, unless they request a new file and convert it.</li>
+</ul>
+<p>Screenshots of two variations of the basic workflow appear in Figure <a href="bookdown.html#fig:workflow-desktop">3.3</a> and Figure <a href="bookdown.html#fig:workflow-atom">3.4</a>. The first displays how to compose the book using the R Studio built-in editor, and the second shows a very similar process using the <a href="https://atom.io">Atom text editor</a>, which we prefer. Learn more about <a href="github-desktop-atom.html">GitHub Desktop and Atom text editor in Chapter 10</a>.</p>
+
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="bookdown.html#cb6-1" aria-hidden="true" tabindex="-1"></a> knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/20-bookdown/workflow-desktop.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:workflow-desktop"></span>
+<img src="images/20-bookdown/workflow-desktop.png" alt="Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right)."  />
+<p class="caption">
+Figure 3.3: Workflow on a Mac desktop: Compose the text in RStudio and build books with Bookdown (top left), manage sources and insert citation keys with Zotero + BetterBibTex (bottom left), push book products to your GitHub repository to host online (right).
+</p>
+</div>
+
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="bookdown.html#cb7-1" aria-hidden="true" tabindex="-1"></a> knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/20-bookdown/workflow-atom.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:workflow-atom"></span>
+<img src="images/20-bookdown/workflow-atom.png" alt="Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products."  />
+<p class="caption">
+Figure 3.4: Variation on the workflow above: Compose the text in your preferred editor (such as Atom), and use RStudio only to build the book products.
+</p>
+</div>
+<p>Our Bookdown workflow met our goal to efficiently and continuously produce multiple book products. But it may not be ideal for everyone, especially novice computer users. Installation and setup requires several steps, as described in the following sections:</p>
+<ul>
+<li><a href="install.html">Install and Set Up Bookdown</a></li>
+<li><a href="structure.html">File Structure and Headers</a></li>
+<li><a href="style-guide.html">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li><a href="images.html">Images and R Code-chunk Formatting</a></li>
+<li><a href="tables.html">Tables in Markdown Format</a></li>
+<li><a href="zotero.html">Zotero and Better BibTeX for Notes and Biblio</a></li>
+</ul>
+<p>Before leaping into Bookdown or any related tool, see also this section on <a href="alternative.html">Alternative Book Publishing Tools</a>.</p>
+<p>For more technical details about Bookdown, and examples of other publications built with this tool, see <a href="https://bookdown.org" class="uri">https://bookdown.org</a>:</p>
+<ul>
+<li>Xie, Yihui. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. Chapman &amp; Hall/CRC, 2018. <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</li>
+<li>Xie, Yihui, J. J. Allaire, and Garrett Grolemund. <em>R Markdown: The Definitive Guide</em>. Chapman &amp; Hall/CRC, 2020. <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a>.</li>
+<li>Xie, Yihui, Christophe Dervieux, and Emily Riederer. <em>R Markdown Cookbook</em>. Chapman &amp; Hall/CRC, 2020. <a href="https://bookdown.org/yihui/rmarkdown-cookbook/" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/</a>.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["tepepub.pdf", "tepepub.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

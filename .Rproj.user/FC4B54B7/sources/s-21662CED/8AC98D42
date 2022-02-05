@@ -1,0 +1,31 @@
+{
+    "id": "8AC98D42",
+    "path": "~/tepepub/05-conclu.Rmd",
+    "project_path": "05-conclu.Rmd",
+    "type": "r_markdown",
+    "hash": "836575988",
+    "contents": "",
+    "dirty": false,
+    "created": 1644007950612.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "14,443",
+        "scrollLine": "11",
+        "rmdVisualMode": "false",
+        "rmdVisualModeLocation": "1621:378",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "1",
+        "docOutlineSize": "119"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1644008351,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1644008351297,
+    "read_only": false,
+    "read_only_alternatives": []
+}

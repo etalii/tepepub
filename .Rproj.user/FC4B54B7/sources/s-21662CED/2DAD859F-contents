@@ -1,0 +1,8 @@
+output_dir: "docs"
+book_filename: "tepepub"
+delete_merged_file: true
+language:
+  label:
+    fig: "Figura "
+    tab: "Tabla "
+chapter_name: " "

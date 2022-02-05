@@ -1,0 +1,9 @@
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+Xie, Yihui. _Bookdown: Authoring Books and Technical Documents with R Markdown_. Chapman & Hall/CRC, 2018. https://bookdown.org/yihui/bookdown/.
+
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. _R Markdown: The Definitive Guide_. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown/.
+
+Xie, Yihui, Christophe Dervieux, and Emily Riederer. _R Markdown Cookbook_. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown-cookbook/.
+

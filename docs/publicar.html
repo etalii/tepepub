@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 4 Publicar | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto</title>
+  <meta name="description" content="TPF y documentación" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 4 Publicar | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://etalii.github.io/tepepub/" />
+  <meta property="og:image" content="https://etalii.github.io/tepepub//images/portada.png" />
+  <meta property="og:description" content="TPF y documentación" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 4 Publicar | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto" />
+  
+  <meta name="twitter:description" content="TPF y documentación" />
+  <meta name="twitter:image" content="https://etalii.github.io/tepepub//images/portada.png" />
+
+<meta name="author" content="Andrés Lemos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="compilar.html"/>
+<link rel="next" href="discusión-y-conclusión.html"/>
+<script src="libs/header-attrs/header-attrs.js"></script>
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>”Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada</strong><br>Andrés Lemos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>&gt;</a></li>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html"><i class="fa fa-check"></i>Licencia de Producción de Pares (versión legible por humanes)</a>
+<ul>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html#bajo-las-condiciones-siguientes"><i class="fa fa-check"></i>Bajo las condiciones siguientes:</a></li>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html#entendiendo-que"><i class="fa fa-check"></i>Entendiendo que</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción: <em>Bookdown</em> como herramienta de publicación ramificada</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#sobre-bookdown-extensiones-y-software-complementario"><i class="fa fa-check"></i><b>1.1</b> Sobre <em>Bookdown</em>, extensiones y software complementario</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#cómo-instalar-y-configurar-bookdown"><i class="fa fa-check"></i><b>1.2</b> Cómo instalar y configurar <em>Bookdown</em></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="componer.html"><a href="componer.html"><i class="fa fa-check"></i><b>2</b> Componer</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="componer.html"><a href="componer.html#estructura-de-archivos-y-encabezados"><i class="fa fa-check"></i><b>2.1</b> Estructura de archivos y encabezados</a></li>
+<li class="chapter" data-level="2.2" data-path="componer.html"><a href="componer.html#hoja-de-estilo"><i class="fa fa-check"></i><b>2.2</b> Hoja de estilo</a></li>
+<li class="chapter" data-level="2.3" data-path="componer.html"><a href="componer.html#zotero-y-better-bibtex-para-las-notas-y-la-bibliografía"><i class="fa fa-check"></i><b>2.3</b> <em>Zotero</em> y <em>Better BibTeX</em> para las notas y la bibliografía</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="componer.html"><a href="componer.html#demostración-de-cita"><i class="fa fa-check"></i><b>2.3.1</b> Demostración de cita</a></li>
+<li class="chapter" data-level="2.3.2" data-path="componer.html"><a href="componer.html#manejo-de-referencias-cruzadas"><i class="fa fa-check"></i><b>2.3.2</b> Manejo de referencias cruzadas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="componer.html"><a href="componer.html#imágenes-y-formato-de-los-fragmentos-de-código"><i class="fa fa-check"></i><b>2.4</b> Imágenes y formato de los fragmentos de código</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-imagen-estática-en-todas-las-ediciones-html-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.1</b> Demostración: fragmento de código de <em>R</em> para imagen estática en todas las ediciones: HTML, PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.2" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-iframe-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.2</b> Demostración: fragmento de código de <em>R</em> para iframe en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.3" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-gif-animado-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.3</b> Demostración: fragmento de código de <em>R</em> para GIF animado en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.4" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-incrustar-video-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.4</b> Demostración: fragmento de código de <em>R</em> para incrustar video en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.5" data-path="componer.html"><a href="componer.html#manejo-de-tablas-en-formato-markdown"><i class="fa fa-check"></i><b>2.4.5</b> Manejo de tablas en formato <em>Markdown</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="compilar.html"><a href="compilar.html"><i class="fa fa-check"></i><b>3</b> Compilar</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="compilar.html"><a href="compilar.html#distintos-formatos-en-un-solo-paso"><i class="fa fa-check"></i><b>3.1</b> Distintos formatos en un solo paso</a></li>
+<li class="chapter" data-level="3.2" data-path="compilar.html"><a href="compilar.html#uso-del-formato-condicional"><i class="fa fa-check"></i><b>3.2</b> Uso del formato condicional</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="publicar.html"><a href="publicar.html"><i class="fa fa-check"></i><b>4</b> Publicar</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="publicar.html"><a href="publicar.html#github-y-el-código-como-infraestructura"><i class="fa fa-check"></i><b>4.1</b> <em>Github</em> y el código como infraestructura</a></li>
+<li class="chapter" data-level="4.2" data-path="publicar.html"><a href="publicar.html#el-libro-publicación-web-y-los-archivos-de-salida"><i class="fa fa-check"></i><b>4.2</b> El libro/ publicación web y los archivos de salida</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discusión-y-conclusión.html"><a href="discusión-y-conclusión.html"><i class="fa fa-check"></i><b>5</b> Discusión y conclusión</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/etalii/tepepub" target="blank">Ver repositorio de esta publicación en GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">“Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="publicar" class="section level1" number="4">
+<h1><span class="header-section-number"> 4</span> Publicar</h1>
+<div id="github-y-el-código-como-infraestructura" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> <em>Github</em> y el código como infraestructura</h2>
+<p>Si bien <em>Bookdown</em> no requiere el uso de <em>GitHub</em>, este flujo de trabajo integra <em>Bookdown</em> y <em>GitHub</em> mediante la función <code>bookdown::gitbook</code> y el archivo de salida <code>gitbook</code> para generar una publicación o libro web. Para ello hace falta:</p>
+<ol style="list-style-type: decimal">
+<li><p>Crear una cuenta en <em>Git</em> y/o registrarse en <em>GitHub</em></p></li>
+<li><p>Una vez iniciada la sesión en una cuenta de <em>GitHub</em> hay que dirigirse al <a href="https://github.com/yihui/bookdown-minimal">repositorio mínimo de bookdown</a> , “forkear” (aplicar el comando/ evento <code>fork</code> de <em>git</em>) y crear una copia.</p></li>
+<li><p>Instalar un cliente de escritorio para <em>Git</em>, puede ser <a href="https://desktop.github.com">GitHub Desktop</a> o <a href="https://www.gitkraken.com/">GitKraken</a> . Éste se va usar para transferir archivos entre el repositorio de <em>GitHub</em> en la nube y la computadora local desde donde se compone la publicación. Si bien los desarrolladores de software pueden preferir acceder a <em>GitHub</em> desde la línea de comandos de la terminal, los clientes de escritorio pueden proporcionar un acceso más sencillo.</p></li>
+<li><p>En <em>RStudio</em>, en la esquina superior derecha, seleccionar Project &gt; Open Project para abrir la carpeta <code>bookdown-minimal</code> de forma local <a href="images/project-open.png">ver captura de pantalla</a>.</p></li>
+<li><p>En <em>RStudio</em>, abrir el archivo <code>index.Rmd</code> y realizar algunas ediciones simples en el texto. Por ejemplo, eliminar el símbolo de <em>hashtag</em> ( # ) en la línea 8 para “descomentar” y activar la opción de la salida PDF y guardar las ediciones <a href="images/edit-book.png">ver captura de pantalla</a>.</p></li>
+<li><p>En <em>RStudio</em>, en la esquina superior derecha, seleccionar la pestaña <code>Build</code>, seleccionar la opción <code>Build Book</code> y elegir <code>All Formats</code> para crear, tanto la edición web estática de estilo <em>gitbook</em>, como la salida en PDF.</p></li>
+<li><p>Si <em>RStudio</em> compila con éxito ambas versiones del libro, la salida se guardará en la subcarpeta <code>_book</code>. Además, el navegador interno de <em>RStudio</em> debería abrir automáticamente la edición web.</p></li>
+<li><p>Si durante la compilación se generó algún tipo de error, los mensajes de error van a aparecer en rojo en el visor de <em>RStudio</em> de la pestaña <code>Build</code>, lo que puede requerir depurar los errores y eliminar los archivos temporales según las instrucciones <a href="images/build-book.png">ver captura de pantalla</a>.</p></li>
+</ol>
+<p>Sugerencia: para futuras sesiones de <em>RStudio</em> que se abran, es recomendable seleccionar la pestaña <code>Packages</code> y hacer click en <code>Update</code> para mantener <em>Bookdown</em> y otros paquetes de software actualizados
+<a href="images/update-packages.png">ver captura de pantalla</a>.</p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Al cerrar el proyecto y salir de <em>RStudio</em>, el siguiente conjunto de pasos se centrará en enviar la publicación al repositorio de <em>GitHub</em> utilizando el cliente de escritorio.</p></li>
+<li><p>Una vez abierto el cliente de escritorio, navegar hasta la carpeta local del proyecto, escribir un resumen rápido para confirmar (o guardar) los cambios que se realizaron anteriormente en la rama maestra y enviar esta versión al repositorio de <em>GitHub</em> en la nube.</p></li>
+<li><p>Dirigirse al repositorio de <em>GitHub</em> del proyecto con un navegador web.</p></li>
+<li><p>En el repositorio de <em>GitHub</em>, seleccionar <em>Settings</em> (Configuración) y en la sección <em>GitHub Pages</em> (Páginas de GitHub) -que es un servicio de alojamiento web gratuito para publicar código y publicaciones/ libros en la web pública-, donde dice <code>Source</code> hay que cambiar de <code>None</code> (Ninguna) a <code>Main</code> (Principal), mantener la opción <code>default /root</code> (predeterminada / raíz) y presionar <code>Save</code> (Guardar).</p></li>
+<li><p>En la sección <em>GitHub Pages</em> la dirección web del sitio publicado debería ser similar a: <code>https://NOMBREDEUSUARIX.github.io/nombre-del-proyecto</code></p></li>
+<li><p>Copiar la dirección web, pegarla en una nueva ventana o pestaña del navegador y al final, agregar <code>_book</code> / <code>index.html</code>. La publicación está configurada de forma predeterminada para almacenar todas las ediciones web y PDF en la subcarpeta <code>_book</code>, con <code>index.html</code> como página de inicio. Por lo tanto, la dirección web completa en la nueva pestaña del navegador debería ser similar a: <code>https://NOMBREDEUSUARIX.github.io/nombre-del-proyecto/_book/index.html</code> .</p></li>
+</ol>
+<p>Otra sugerencia: es posible que haya que esperar hasta un minuto para que las ediciones hechas en el repositorio de <em>GitHub</em> en la nube, aparezcan en la dirección web del proyecto. Además, después de esperar a que la web realice los cambios, es recomendable asegurarse de “forzar la recarga” o “actualizar por completo” el navegador web para que la versión de la vista que se obtiene, se actualice directamente desde el servidor de <em>GitHub</em> y no desde la memoria <em>caché</em> interna del navegador.</p>
+</div>
+<div id="el-libro-publicación-web-y-los-archivos-de-salida" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> El libro/ publicación web y los archivos de salida</h2>
+<p>La principal diferencia entre renderizar un libro/ publicación web usando <em>Bookdown</em> y renderizar un único documento <code>.rmd</code> usando <em>R Markdown</em>, a HTML, es que para el libro/ publicación web se generarán varias páginas HTML de forma predeterminada, un archivo HTML por capítulo. Esto hace que sea más fácil marcar un capítulo determinado o compartir su URL y que resulte más rápido cargar un libro/ publicación web en el navegador. Hay distintos estilos para la salida HTML, pero en este trabajo se presenta el estilo desarrollado por <em>GitBook</em>, con algunas <em>features</em> aportadas por <em>Bookdown</em>..</p>
+<p>La interfaz de navegación <span class="citation">(<a href="bibliografía.html#ref-manovichLenguajeNuevosMedios2006" role="doc-biblioref">Manovich, 2006</a>)</span> de <a href="https://www.gitbook.com"><em>GitBook</em></a> presenta el contenido en bloques <span class="citation">(<a href="bibliografía.html#ref-seminariopublicacionesdigitalesUnidadParte2021b" role="doc-biblioref">Seminario Publicaciones Digitales, 2021b</a>)</span>, de forma que consiste en una barra lateral (<em>sidebar</em>) a la izquierda, que muestra la tabla de contenidos y el cuerpo principal de la publicación a la derecha. Esta barra se puede colapsar en caso de que se quiera ampliar la vista del contenido. Por otro lado, el diseño tiene comportamiento responsive, es decir, responde al tamaño de la ventana. Por ejemplo, los botones de navegación se muestran a la izquierda/ derecha del cuerpo de la publicación cuando la ventana es lo suficientemente ancha y se contraen en la parte inferior cuando la ventana es estrecha, de forma de dar a les lectorxs más campo horizontal para leer.</p>
+<p>La forma más fácil de generar un <em>gitbook</em> es usar el asistente de proyectos (<em>Wizard</em>) de <em>RStudio</em> (File &gt; New Project &gt; New Directory &gt; Book project using bookdown) y seleccionar <em>gitbook</em> en el menú desplegable (ver Figura <a href="publicar.html#fig:new-bs4-book">4.1</a> ).</p>
+<div class="figure" style="text-align: center"><span id="fig:new-bs4-book"></span>
+<img src="images/new-bs4-book.png" alt="Captura de pantalla del asistente de proyectos de RStudio para crear un nuevo proyecto de libro/ publicación."  />
+<p class="caption">
+Figura 4.1: Captura de pantalla del asistente de proyectos de RStudio para crear un nuevo proyecto de libro/ publicación.
+</p>
+</div>
+<p>Lo mismo se puede lograr desde la consola de <em>R</em> mediante el comando <code>bookdown::create_gitbook()</code> pero este método es mucho menos accesible a personas que carezcan o cuenten con poca predisposición para trabajar con herramientas avanzadas de programación.</p>
+<p>Sobre la base de lo que ofrece la versión nativa de <em>GitBook</em>, <em>Bookdown</em> cuenta con una serie de mejoras. La más importante consiste en el uso de <em>R Markdown</em> (<em>Rmd</em>) v2, basado en <em>Pandoc</em>.</p>
+<p>La interfaz del libro/ publicación web, además, hereda de <em>GitBook</em> una barra de herramientas (<em>toolbar</em>) (ver Figura <a href="publicar.html#fig:gitbook">4.2</a> ) en la parte superior de cada página que permite cambiar dinámicamente la configuración de la visualización, botón de búsqueda, descarga de otros formatos de salida (LaTex, pdf, epub y mobi) y compartir en redes sociales ( <em>Facebook</em>, <em>Twitter</em> e <em>Instapaper</em> por ejemplo). Asímismo, la opción de la barra de herramientas tiene una posición de sub-opción que puede tomar valores fijos o estáticos. El valor predeterminado es que la barra de herramientas quede fija (<em>sticky</em>) en la parte superior de la página, por lo que incluso si se desplaza hacia abajo, la barra de herramientas seguirá estando visible.</p>
+<div class="figure"><span id="fig:gitbook"></span>
+<img src="images/gitbook.png" alt="barra de herramientas del libro/ publicación web. " width="100%" />
+<p class="caption">
+Figura 4.2: barra de herramientas del libro/ publicación web.
+</p>
+</div>
+<p>Por otro lado, en el archivo <code>_bookdown.yml</code> se pueden configurar un conjunto de opciones de nivel superior y metadatos que se pueden pasar a la plantilla HTML del libro / publicación web a través de <em>Pandoc</em>. Es posible que no tengan efectos visibles en la salida HTML, pero pueden ser útiles cuando dicha salida se implementa como sitio web. Estas opciones incluyen:</p>
+<ul>
+<li><p><code>description:</code> una cadena de caracteres que se escribirá en el atributo <code>content</code> de la etiqueta <code>&lt;meta name="description" content=""&gt;</code> en el encabezado HTML (si falta, se usará el título del libro). Configurar esta opción tiene importancia para la optimización de motores de búsqueda (SEO).</p></li>
+<li><p><code>url:</code> la <em>URL</em> del sitio web del libro, por ejemplo, <a href="https://etalii.github.io/tepepub/" class="uri">https://etalii.github.io/tepepub/</a></p></li>
+<li><p><code>github-repo:</code> El repositorio de <em>GitHub</em> del libro/ publicación en la forma usuarie/repo.</p></li>
+<li><p><code>cover-image:</code> la ruta a la imagen de portada del libro/ publicación.</p></li>
+<li><p><code>favicon:</code> Una ruta al ícono que se muestra en la barra de direcciones del navegador o frente al título de la página en la pestaña si el navegador admite pestañas.</p></li>
+</ul>
+<p>A continuación se muestra a modo de ejemplo la lista completa de estas opciones de configuración de metadatos YAML:</p>
+<pre><code>title: &quot;An Awesome Book&quot;
+author: &quot;John Smith&quot;
+description: &quot;This book introduces the ABC theory, and ...&quot;
+url: &#39;https\://bookdown.org/john/awesome/&#39;
+github-repo: &quot;john/awesome&quot;
+cover-image: &quot;images/cover.png&quot;
+favicon: &quot;favicon.ico&quot;</code></pre>
+<p>Notar que un efecto deseable de configurar la descripción y la imagen de portada es que cuando se comparta el enlace del libro/ publicación web en los sitios de redes sociales, el enlace puede expandirse automáticamente a una tarjeta con la imagen de portada y la descripción del libro/ publicación.</p>
+<p>Finalmente, al pie de la barra de contenidos se encuentra el link al repositorio de <em>GitHub</em> donde se encuentran los archivos fuente en formato <em>Rmd</em>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="compilar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discusión-y-conclusión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["tepepub.pdf", "tepepub.epub", "tepepub.mobi"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

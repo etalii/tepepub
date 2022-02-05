@@ -1,0 +1,441 @@
+{
+    "sources": [
+        {
+            "URL": "http://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "xie2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Seminario Publicaciones Digitales"
+                }
+            ],
+            "id": "seminariopublicacionesdigitalesUnidadParte",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Facultad de Filosofía y Letras, UBA",
+            "title": "Unidad 2. Parte 3.",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Seminario Publicaciones Digitales"
+                }
+            ],
+            "id": "seminariopublicacionesdigitalesUnidadParte2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Facultad de Filosofía y Letras, UBA",
+            "title": "Unidad 1. Parte 1.",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "literal": "Seminario Publicaciones Digitales"
+                }
+            ],
+            "id": "seminariopublicacionesdigitalesUnidadParte2021a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Facultad de Filosofía y Letras, UBA",
+            "title": "Unidad 3. Parte 1.",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "McLuhan",
+                    "given": "Marshall"
+                }
+            ],
+            "id": "marshallmcluhanComprenderMediosComunicacion1994",
+            "issued": {
+                "date-parts": []
+            },
+            "publisher": "Paidós",
+            "publisher-place": "Barcelona",
+            "title": "Comprender Los Medios de Comunicación. Las Extensiones Del Ser Humano",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Seminario Publicaciones Digitales"
+                }
+            ],
+            "id": "seminariopublicacionesdigitalesUnidad2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Facultad de Filosofía y Letras, UBA",
+            "title": "Unidad 4",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Santa Ana Anguiano",
+                    "given": "Ramiro"
+                }
+            ],
+            "id": "ramiroEdicionDigitalComo2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Mariana Eguaras",
+            "publisher-place": "Ciudad de México",
+            "title": "Edición Digital Como Metodología Para Una Edición Global",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Manovich",
+                    "given": "Lev"
+                }
+            ],
+            "id": "manovichLenguajeNuevosMedios2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "publisher": "Paidós",
+            "publisher-place": "Buenos Aires",
+            "title": "El Lenguaje de Los Nuevos Medios de Comunicación. La Imagen En La Era Digital",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "literal": "Seminario Publicaciones Digitales"
+                }
+            ],
+            "id": "seminariopublicacionesdigitalesUnidadParte2021b",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "Facultad de Filosofía y Letras, UBA",
+            "title": "Unidad 1. Parte 2.",
+            "type": ""
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A Language and Environment for Statistical Computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 0.22",
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "title-short": "bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-knitr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 1.33",
+            "title": "knitr: A General-Purpose Package for Dynamic Report Generation in R",
+            "title-short": "knitr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=rmarkdown",
+            "author": [
+                {
+                    "family": "Allaire",
+                    "given": "JJ"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "McPherson",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Luraschi",
+                    "given": "Javier"
+                },
+                {
+                    "family": "Ushey",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Atkins",
+                    "given": "Aron"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Cheng",
+                    "given": "Joe"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Iannone",
+                    "given": "Richard"
+                }
+            ],
+            "id": "R-rmarkdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 2.10",
+            "title": "rmarkdown: Dynamic Documents for R",
+            "title-short": "rmarkdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "bookdown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1138700109",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "title-short": "bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "knitr2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.crcpress.com/product/isbn/9781466561595",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "container-title": "Implementing Reproducible Computational Research",
+            "editor": [
+                {
+                    "family": "Stodden",
+                    "given": "Victoria"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Roger D."
+                }
+            ],
+            "id": "knitr2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1466561595",
+            "publisher": "Chapman; Hall/CRC",
+            "title": "knitr: A Comprehensive Tool for Reproducible Research in R",
+            "title-short": "knitr",
+            "type": "chapter"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Allaire",
+                    "given": "J. J."
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "rmarkdown2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "ISBN 9781138359338",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown: The Definitive Guide",
+            "title-short": "R Markdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown-cookbook",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "Riederer",
+                    "given": "Emily"
+                }
+            ],
+            "id": "rmarkdown2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "ISBN 9780367563837",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown Cookbook",
+            "type": "book"
+        }
+    ],
+    "project_biblios": [
+        "book.bib",
+        "packages.bib"
+    ]
+}

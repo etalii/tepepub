@@ -1,0 +1,45 @@
+# Compilar
+
+## Distintos formatos en un solo paso
+
+Para compilar el libro/ publicación en múltiples formatos (HTML, _LaTeX_/ PDF, odt, doc y Epub) y en un solo paso se puede llamar la función `bookdown::render_book()` desde la línea de comandos de _R_ o hacer _click_ en el botón `Build Book` del panel `Build` en _RStudio_.
+
+Por otro lado, los formatos de salida se configuran en el archivo `_output.yml` del proyecto. En el caso que, por ejemplo, se desee compilar una publicación en los formatos libro de git (_gitbook_), HTML, _LaTeX_/ PDF y Epub, dicho archivo YAML se debe configurar de la siguiente forma:
+
+```
+output:
+  bookdown::gitbook:
+    css: style.css
+    repo: https://github.com/etalii/tepepub
+    config:
+      toc:
+        before: |
+          <li> </li>
+        after: |
+          <li> </li>
+      download: ["pdf", "epub"]
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+  bookdown::html_book
+  bookdown::epub_book: default
+```
+
+## _Zotero_ y _Better BibTeX_ para las notas y la bibliografía
+
+Este flujo de trabajo basado en _Bookdown_ permite utilizar el administrador de bibliografía de código abierto _Zotero_, en conjunto con la extensión [Better BibTeX](https://retorque.re/zotero-better-bibtex/), para simplificar el proceso de citar fuentes y crear bibliografías. Así, en lugar de escribir las referencias completas directamente en el texto, se puede insertar una breve clave de cita en el original de la publicación y las herramientas generarán automáticamente las referencias deseadas en el formato de preferencia, creando así una bibliografía alfabética de todas las fuentes citadas, al final de la publicación.
+
+Para crear una cita, una vez instaladas las herramientas, se debe seguir la siguiente secuencia de pasos:
+
+1. Crear una entrada para cada fuente (libro, artículo de revista, documento, etc.) en la biblioteca de _Zotero_. 
+
+2. Seleccionar y cargar el estilo de cita preferido en formato `.csl`. 
+
+3. Para cada fuente, _Better BibTeX_ genera una clave de cita única similar a esta `tyackOneBestSystem1974`, que se puede pegar con formato para crear una nota en el original de la publicación. 
+
+Por último hay que tener en cuenta que cada vez que se crea un libro dentro de _Bookdown_, hay que exportar la biblioteca o colección de _Zotero_ en formato .bib al repositorio de _Bookdown_, que proporciona los datos de referencia para que coincidan con las claves de cita en el texto.
+
+### Demos de citas

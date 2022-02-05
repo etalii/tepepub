@@ -1,0 +1,70 @@
+# Compilar
+
+## Distintos formatos en un solo paso
+
+Para compilar el libro/ publicación en múltiples formatos (HTML, _LaTeX_/ PDF, odt, doc y Epub) y en un solo paso, se puede llamar la función `bookdown::render_book()` desde la línea de comandos de _R_ o hacer _click_ en el botón `Build Book` del panel `Build` en _RStudio_.
+
+Por otro lado, los formatos de salida se configuran en el archivo `_output.yml` del proyecto. En el caso que, por ejemplo, se desee compilar una publicación en los formatos libro de _git_ (_gitbook_), HTML, _LaTeX_/ PDF y Epub, dicho archivo YAML se debe configurar de la siguiente forma:
+
+```
+output:
+  bookdown::gitbook:
+    css: style.css
+    repo: https://github.com/etalii/tepepub
+    config:
+      toc:
+        before: |
+          <li> </li>
+        after: |
+          <li> </li>
+      download: ["pdf", "epub"]
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+  bookdown::html_book
+  bookdown::epub_book: default
+```
+
+## Uso del formato condicional
+
+El formato condicional ofrece la opción de mostrar texto o imágenes en algunas ediciones de la publicación, pero no en otras. A continuación, se muestran varias formas de utilizar el formato condicional:
+
+- Insertar un comentario de código HTML `<! - comentario ->` en el archivo `.Rmd` para ocultar algunas líneas de texto. Esto aparece como texto comentado en los formatos HTML y .md, por ende, no se muestra en el navegador HTML y no aparece de ninguna manera en los formatos PDF o .doc .
+
+- Adecuar la salida condicional a diferentes publicaciones mediante la función del paquete de _R_ `is_ [html / latex] _output` que permite, por ejemplo, que el texto sea visible en la edición HTML, pero no en la edición PDF o viceversa.
+
+- Personalizar el código de las hojas de estilo en _CSS_ ( `style.css` ) de la publicación web. 
+
+- Agregar encabezados, pies de página y bajadas al texto en las versiones HTML o _LaTeX_.
+ 
+- Compilar diferentes versiones de la publicación en HTML y _LaTeX_ / PDF que se compongan de los mismos capítulos/ secciones en distinto órden, mediante la enumeración diferencial en el archivo` _bookdown.yml`. De esta manera es posible publicar todos los capítulos / secciones para la versión HTML, mientras que solamente se compilen los capítulos seleccionados en el PDF:
+
+```
+# cuando se compilan todos los capítulos para un libro/ publicación HTML hay que comentarlos todos, mientras que se tiene que  eliminar el comentario para omitir los capítulos que no se enumeran a continuación de las versiones PDF y _Markdown_ para ORM
+
+
+# rmd_files: [
+#   "index.Rmd",
+#   "0.0-introduction.Rmd",
+#   "01-choose.Rmd",
+#   "02-spreadsheet.Rmd",
+#   "03-find.Rmd",
+#   "04-clean.Rmd",
+#   "05-comparisons.Rmd",
+#   "06-chart.Rmd",
+#   "07-map.Rmd",
+#   "08-table.Rmd",
+#   "09-embed.Rmd",
+#   "10-github.Rmd",
+#   "11-chartcode.Rmd",
+#   "12-leaflet.Rmd",
+#   "13-transform.Rmd",
+#   "14-detect.Rmd",
+#   "15-story.Rmd",
+#   "16-fix.Rmd",
+#   "21-references.Rmd"
+# ]
+``` 

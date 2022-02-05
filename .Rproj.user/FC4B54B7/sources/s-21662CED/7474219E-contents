@@ -1,0 +1,78 @@
+--- 
+title: " “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto "
+author: ["Andrés Lemos"]
+date: "Febrero de 2022"
+knit: "bookdown::render_book"
+output: bookdown::gitbook
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+csl: apa.csl
+biblio-style: apalike
+link-citations: yes
+description: "TPF y documentación"
+cover-image: "images/portada.png"
+url: 'https://etalii.github.io/tepepub/'
+
+---
+
+# > {-}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(knitr.graphics.auto_pdf = TRUE)
+```
+
+![](images/portada.png)
+
+# Licencia de Producción de Pares (versión legible por humanes) {- #licencias}
+
+> Esto es un resumen legible por humanos del [texto legal (la licencia
+> completa)](http://endefensadelsl.org/ppl_es.html)
+## Ud. es libre de {-}
+
+* Compartir - copiar, distribuir, ejecutar y comunicar públicamente la obra
+* Hacer obras derivadas
+
+## Bajo las condiciones siguientes: {-}
+
+
+![**Atribución** - Debe reconocer los créditos de la obra de la manera
+especificada por el autor o el licenciante (pero no de una manera que sugiera
+que tiene su apoyo o que apoyan el uso que hace de su obra).](images/by.png)
+
+![**Compartir bajo la Misma Licencia** - Si altera o transforma esta obra, o
+genera una obra derivada, sólo puede distribuir la obra generada bajo una
+licencia idéntica a ésta.](images/sa.png)
+
+![**No Capitalista** - La explotación comercial de esta obra sólo está permitida
+a cooperativas, organizaciones y colectivos sin fines de lucro, a
+organizaciones de trabajadores autogestionados, y donde no existan relaciones
+de explotación.  Todo excedente o plusvalía obtenidos por el ejercicio de los
+derechos concedidos por esta Licencia sobre la Obra deben ser distribuidos por y
+entre los trabajadores.](images/nc.png)
+
+
+## Entendiendo que {-}
+
+* **Renuncia** - Alguna de estas condiciones puede no aplicarse si se obtiene
+  el permiso del titular de los derechos de autor.
+
+* **Dominio Público** - Cuando la obra o alguno de sus elementos se halle en
+  el dominio público según la ley vigente aplicable, esta situación no quedará
+  afectada por la licencia.
+
+* **Otros derechos** - Los derechos siguientes no quedan afectados por
+  la licencia de ninguna manera:
+
+    + Los derechos derivados de usos legítimos u otras limitaciones
+      reconocidas por ley no se ven afectados por lo anterior;
+
+    + Los derechos morales del autor;
+
+    + Derechos que pueden ostentar otras personas sobre la propia obra o
+      su uso, como por ejemplo derechos de imagen o de privacidad.
+
+* **Aviso** - Al reutilizar o distribuir la obra, tiene que dejar muy en cla
+  los términos de la licencia de esta obra.  La mejor forma de hacerlo es
+  enlazar a esta página.

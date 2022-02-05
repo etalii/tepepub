@@ -1,0 +1,6 @@
+h1:intro Introducción:  como herramienta de publicación ramificada
+(ref:workflow) Esquema simplificado de las etapas generales del flujo de trabajo, componer, compilar y publicar en múltiples formatos
+fig:workflow (ref:workflow)
+h2:sobre-bookdown-extensiones-y-software-complementario Sobre , extensiones y software complementario
+h2:cómo-instalar-y-configurar-bookdown Cómo instalar y configurar 
+

@@ -1,0 +1,89 @@
+# Publicar
+
+## _Github_ y el código como infraestructura
+
+Si bien _Bookdown_ no requiere el uso de _GitHub_, el flujo de trabajo integra _Bookdown_ y _GitHub_ mediante la función `bookdown::gitbook` y el archivo de salida `gitbook` para generar una publicación o libro web. Para ello hace falta:
+
+1. Crear una cuenta en _Git_ y/o registrarse en _GitHub_
+
+2. Una vez iniciada la sesión en una cuenta de _GitHub_ hay que dirigirse al [repositorio mínimo de bookdown](https://github.com/yihui/bookdown-minimal) , “forkear” (aplicar el comando/ evento `fork` de _git_) y crear una copia. 
+
+3. Instalar un cliente de escritorio para _Git_, puede ser [GitHub Desktop](https://desktop.github.com) o [GitKraken](https://www.gitkraken.com/) . Éste se va usar para transferir archivos entre el repositorio de _GitHub_ en la nube y la computadora local desde donde se compone la publicación. Si bien los desarrolladores de software pueden preferir acceder a _GitHub_ desde la línea de comandos de la terminal, los clientes de escritorio proporcionan un acceso más sencillo.
+
+4. En _RStudio_, en la esquina superior derecha, seleccionar Project > Open Project para abrir la carpeta `bookdown-minimal` de forma local [ver captura de pantalla](images/project-open.png).
+
+5. En _RStudio_, abrir el archivo `index.Rmd` y realizar algunas ediciones simples en el texto. Por ejemplo, eliminar el símbolo de _hashtag_ ( # ) en la línea 8 para "descomentar" y activar la opción de libro PDF y guardar las ediciones [ver captura de pantalla](images/edit-book.png).
+
+6. En _RStudio_, en la esquina superior derecha, seleccionar la pestaña `Build`, seleccionar la opción `Build Book` y elegir `All Formats` para crear, tanto la edición web estática de estilo _gitbook_, como la edición en PDF. 
+
+7. Si _RStudio_ compila con éxito ambas versiones del libro, la salida se guardará en la subcarpeta `_book`. Además, el navegador interno de _RStudio_ debería abrir automáticamente la edición web.
+
+8. Si durante la compilación se generó algún tipo de error, los mensajes de error van a aparecer en rojo en el visor de _RStudio_, _Build_, lo que puede requerir depurar los errores y eliminar los archivos temporales según las instrucciones [ver captura de pantalla](images/build-book.png). 
+
+Sugerencia: para futuras sesiones de _RStudio_ que se abran, es recomendable seleccionar la pestaña `Packages` y hacer click en `Update` para mantener _Bookdown_ y otros paquetes de software actualizados
+ [ver captura de pantalla](images/update-packages.png).
+
+9. Al cerrar el proyecto y salir de _RStudio_, el siguiente conjunto de pasos se centrará en enviar la publicación al repositorio de _GitHub_ utilizando el cliente de escritorio.
+
+10. Una vez abierto el cliente de escritorio, navegar hasta la carpeta local del proyecto, escribir un resumen rápido para confirmar (o guardar) los cambios que se realizaron anteriormente en la rama maestra y enviar esta versión al repositorio de _GitHub_ en la nube.
+
+11. Dirigirse al repositorio de _GitHub_ del proyecto con un navegador web.
+
+12. En el repositorio de _GitHub_, seleccionar _Settings_ (Configuración) y en la sección _GitHub Pages_ (Páginas de GitHub), que es un servicio de alojamiento web gratuito para publicar código y publicaciones/ libros en la web pública. Además, donde dice `Source` hay que cambiar de `None` (Ninguna) a `Main` (Principal), mantener la opción `default /root` (predeterminada / raíz) en el medio y presionar `Save` (Guardar).
+
+13. En la sección _GitHub Pages_ la dirección web del sitio publicado debería ser similar a: https://NOMBREDEUSUARIX.github.io/nombre-del-proyecto 
+
+14. Copiar la dirección web, pegarla en una nueva pestaña del navegador y al final, agregar `_book` / `index.html`. La publicación está configurada de forma predeterminada para almacenar todas las ediciones web y PDF en la subcarpeta `_book`, con `index.html` como página de inicio. Por lo tanto, la dirección web completa en la nueva pestaña del navegador debería ser similar a: https://NOMBREDEUSUARIX.github.io/nombre-del-proyecto/_book/index.html 
+
+Otra sugerencia: es posible que haya que esperar hasta un minuto para que las ediciones hechas en el repositorio de _GitHub_ en la nube, aparezcan en la dirección web del proyecto. Además, después de esperar a que la web realice los cambios, es recomendable asegurarse de "forzar la recarga" o "actualizar por completo" el navegador web para que la versión de la vista que se obtiene, se actualice directamente desde el servidor de _GitHub_ y no desde la memoria caché interna del navegador.
+
+
+## El libro/ publicación web y los archivos de salida
+
+La principal diferencia entre renderizar un libro/ publicación web usando _Bookdown_ y renderizar un único documento `.rmd` usando _R Markdown_, a HTML, es que para el libro/ publicación web se generarán varias páginas HTML de forma predeterminada, un archivo HTML por capítulo. Esto hace que sea más fácil marcar un capítulo determinado o compartir su URL y que resulte más rápido cargar un libro/ publicación web en el navegador. Hay distintos estilos para la salida HTML, pero en este trabajo se presenta el estilo desarrollado por _GitBook_, con algunas _features_ aportadas por _Bookdown_..
+
+El estilo [GitBook](https://www.gitbook.com) consiste en una barra lateral (_sidebar_) a la izquierda, que muestra la tabla de contenidos y el cuerpo principal de la publicación a la derecha. Esta barra se puede colapsar en caso de que se quiera ampliar la vista del contenido. Por otro lado, el diseño tiene comportamiento responsive, es decir, responde al tamaño de la ventana, por ejemplo, los botones de navegación se muestran a la izquierda/ derecha del cuerpo de la publicación cuando la ventana es lo suficientemente ancha, y se contraen en la parte inferior cuando la ventana es estrecha, de forma de dar a les lectorxs más campo horizontal para leer.
+
+La forma más fácil de generar un _gitbook_ es usar el asistente de proyectos (_Wizard_) de _RStudio_ (File > New Project > New Directory > Book project using bookdown) y seleccionar _gitbook_ en el menú desplegable (ver Figura \@ref(fig:new-bs4-book) ).
+
+```{r new-bs4-book, fig.align='center', echo=FALSE, fig.cap="Captura de pantalla del asistente de proyectos de RStudio para crear un nuevo proyecto de libro/ publicación."}
+knitr::include_graphics('images/new-bs4-book.png', dpi = NA)
+```
+
+Lo mismo se puede lograr desde la consola de _R_ mediante el comando `bookdown::create_gitbook()` pero este método es mucho menos accesible a personas que carezcan o cuenten con poca predisposición para trabajar con herramientas avanzadas de programación.
+
+Sobre la base de lo que ofrece la versión nativa de _GitBook_, _Bookdown_ cuenta con una serie de mejoras. La más importante consiste en el uso de _R Markdown_ (_Rmd_) v2, basado en _Pandoc.
+
+La interfaz del libro/ publicación web, además, hereda de _GitBook_ una barra de herramientas (_toolbar_) (ver Figura \@ref(fig:gitbook) ) en la parte superior de cada página que permite cambiar dinámicamente la configuración de la visualización, botón de búsqueda, descarga de otros formatos de salida (LaTex, pdf, epub y mobi) y compartir en redes sociales (Facebook, Twitter, WeiBo e Instapaper por ejemplo). Además, la opción de la barra de herramientas tiene una posición de sub-opción que puede tomar valores fijos o estáticos. El valor predeterminado es que la barra de herramientas se fijare en la parte superior de la página, por lo que incluso si se desplaza hacia abajo en la página, la barra de herramientas seguirá estando visible.
+
+```{r gitbook, echo=FALSE, fig.cap='barra de herramientas del libro/ publicación web. ', out.width='100%'}
+knitr::include_graphics('images/gitbook.png', dpi = NA)
+```
+
+Por otro lado, en el archivo `_bookdown.yml` se pueden configurar un conjunto de opciones de nivel superior y metadatos que se pueden pasar a la plantilla HTML del libro / publicación web a través de _Pandoc_. Es posible que no tengan efectos visibles en la salida HTML, pero pueden ser útiles cuando dicha salida se implementa como sitio web. Estas opciones incluyen:
+
+- `description:` una cadena de caracteres que se escribirá en el atributo `content` de la etiqueta `<meta name="description" content="">` en el encabezado HTML (si falta, se usará el título del libro). Configurar esta opción tiene importancia para la optimización de motores de búsqueda (SEO).
+
+- `url:` la _URL_ del sitio web del libro, por ejemplo, https://etalii.github.io/tepepub/
+
+- `github-repo:` El repositorio de _GitHub_ del libro/ publicación en la forma usuarie/repo. 
+
+- `cover-image:` la ruta a la imagen de portada del libro/ publicación. 
+
+- `favicon:` Una ruta al ícono que se muestra en la barra de direcciones del navegador o frente al título de la página en la pestaña si el navegador admite pestañas.
+
+A continuación se muestra a modo de ejemplo la lista completa de estas opciones de configuración de metadatos YAML:
+
+```
+title: "An Awesome Book"
+author: "John Smith"
+description: "This book introduces the ABC theory, and ..."
+url: 'https\://bookdown.org/john/awesome/'
+github-repo: "john/awesome"
+cover-image: "images/cover.png"
+favicon: "favicon.ico"
+```
+
+Notar que un efecto deseable de configurar la descripción y la imagen de portada es que cuando se comparta el enlace del libro/ publicación web en los sitios de redes sociales, el enlace puede expandirse automáticamente a una tarjeta con la imagen de portada y la descripción del libro/ publicación.
+
+Finalmente, al pie de la barra de contenidos se encuentra el link al repositorio de GitHub donde se encuentran los archivos fuente en formato _Rmd_.

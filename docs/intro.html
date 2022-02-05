@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 1 Introducción: Bookdown como herramienta de publicación ramificada | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto</title>
+  <meta name="description" content="TPF y documentación" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 1 Introducción: Bookdown como herramienta de publicación ramificada | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://etalii.github.io/tepepub/" />
+  <meta property="og:image" content="https://etalii.github.io/tepepub//images/portada.png" />
+  <meta property="og:description" content="TPF y documentación" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 1 Introducción: Bookdown como herramienta de publicación ramificada | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto" />
+  
+  <meta name="twitter:description" content="TPF y documentación" />
+  <meta name="twitter:image" content="https://etalii.github.io/tepepub//images/portada.png" />
+
+<meta name="author" content="Andrés Lemos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="licencias.html"/>
+<link rel="next" href="componer.html"/>
+<script src="libs/header-attrs/header-attrs.js"></script>
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>”Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada</strong><br>Andrés Lemos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>&gt;</a></li>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html"><i class="fa fa-check"></i>Licencia de Producción de Pares (versión legible por humanes)</a>
+<ul>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html#bajo-las-condiciones-siguientes"><i class="fa fa-check"></i>Bajo las condiciones siguientes:</a></li>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html#entendiendo-que"><i class="fa fa-check"></i>Entendiendo que</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción: <em>Bookdown</em> como herramienta de publicación ramificada</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#sobre-bookdown-extensiones-y-software-complementario"><i class="fa fa-check"></i><b>1.1</b> Sobre <em>Bookdown</em>, extensiones y software complementario</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#cómo-instalar-y-configurar-bookdown"><i class="fa fa-check"></i><b>1.2</b> Cómo instalar y configurar <em>Bookdown</em></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="componer.html"><a href="componer.html"><i class="fa fa-check"></i><b>2</b> Componer</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="componer.html"><a href="componer.html#estructura-de-archivos-y-encabezados"><i class="fa fa-check"></i><b>2.1</b> Estructura de archivos y encabezados</a></li>
+<li class="chapter" data-level="2.2" data-path="componer.html"><a href="componer.html#hoja-de-estilo"><i class="fa fa-check"></i><b>2.2</b> Hoja de estilo</a></li>
+<li class="chapter" data-level="2.3" data-path="componer.html"><a href="componer.html#zotero-y-better-bibtex-para-las-notas-y-la-bibliografía"><i class="fa fa-check"></i><b>2.3</b> <em>Zotero</em> y <em>Better BibTeX</em> para las notas y la bibliografía</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="componer.html"><a href="componer.html#demostración-de-cita"><i class="fa fa-check"></i><b>2.3.1</b> Demostración de cita</a></li>
+<li class="chapter" data-level="2.3.2" data-path="componer.html"><a href="componer.html#manejo-de-referencias-cruzadas"><i class="fa fa-check"></i><b>2.3.2</b> Manejo de referencias cruzadas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="componer.html"><a href="componer.html#imágenes-y-formato-de-los-fragmentos-de-código"><i class="fa fa-check"></i><b>2.4</b> Imágenes y formato de los fragmentos de código</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-imagen-estática-en-todas-las-ediciones-html-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.1</b> Demostración: fragmento de código de <em>R</em> para imagen estática en todas las ediciones: HTML, PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.2" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-iframe-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.2</b> Demostración: fragmento de código de <em>R</em> para iframe en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.3" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-gif-animado-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.3</b> Demostración: fragmento de código de <em>R</em> para GIF animado en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.4" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-incrustar-video-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.4</b> Demostración: fragmento de código de <em>R</em> para incrustar video en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.5" data-path="componer.html"><a href="componer.html#manejo-de-tablas-en-formato-markdown"><i class="fa fa-check"></i><b>2.4.5</b> Manejo de tablas en formato <em>Markdown</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="compilar.html"><a href="compilar.html"><i class="fa fa-check"></i><b>3</b> Compilar</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="compilar.html"><a href="compilar.html#distintos-formatos-en-un-solo-paso"><i class="fa fa-check"></i><b>3.1</b> Distintos formatos en un solo paso</a></li>
+<li class="chapter" data-level="3.2" data-path="compilar.html"><a href="compilar.html#uso-del-formato-condicional"><i class="fa fa-check"></i><b>3.2</b> Uso del formato condicional</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="publicar.html"><a href="publicar.html"><i class="fa fa-check"></i><b>4</b> Publicar</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="publicar.html"><a href="publicar.html#github-y-el-código-como-infraestructura"><i class="fa fa-check"></i><b>4.1</b> <em>Github</em> y el código como infraestructura</a></li>
+<li class="chapter" data-level="4.2" data-path="publicar.html"><a href="publicar.html#el-libro-publicación-web-y-los-archivos-de-salida"><i class="fa fa-check"></i><b>4.2</b> El libro/ publicación web y los archivos de salida</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discusión-y-conclusión.html"><a href="discusión-y-conclusión.html"><i class="fa fa-check"></i><b>5</b> Discusión y conclusión</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/etalii/tepepub" target="blank">Ver repositorio de esta publicación en GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">“Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1" number="1">
+<h1><span class="header-section-number"> 1</span> Introducción: <em>Bookdown</em> como herramienta de publicación ramificada</h1>
+<p>El flujo de trabajo que se propone a continuación, así como la composición, imposición y archivos digitales de este TPF, fueron realizados con herramientas de código abierto y de uso gratuito<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>; principalmente <em>Bookdown</em>, <em>GitHub</em> y <em>Zotero</em>. El objetivo de este trabajo es explicar y documentar el desarrollo de un proyecto editorial que combina dichas herramientas en un flujo de trabajo basado en software libre y de acceso abierto, y que se orienta hacia un esquema de edición digital ramificada, descentralizada y distribuida.</p>
+<p>Así, los métodos propuestos en este trabajo se organizan en un flujo editorial ramificado <span class="citation">(<a href="bibliografía.html#ref-ramiroEdicionDigitalComo2018" role="doc-biblioref">Santa Ana Anguiano, 2018</a>)</span> que consta de tres grandes etapas: componer, compilar y publicar (ver Figura <a href="intro.html#fig:workflow">1.1</a> ). A grandes rasgos y a los efectos de este desarrollo, componer se refiere a producir los archivos fuente y darles formato en R <a href="https://es.wikipedia.org/wiki/Markdown">Markdown</a>, la versión del lenguaje de marcado <em>Markdown</em> optimizada para el lenguaje de programación <em>R</em>; compilar consiste en correr un conjunto de comandos, funciones y fragmento de código de <em>R</em> para imponer y generar los archivos de salida; mientras que publicar consiste en la disposición pública de la publicación en alguna plataforma y/o soporte.</p>
+<p>Es decir que, la técnica productiva y reproductiva <span class="citation">(<a href="bibliografía.html#ref-seminariopublicacionesdigitalesUnidadParte2021" role="doc-biblioref">Seminario Publicaciones Digitales, 2021a</a>)</span> que se presenta en este desarrollo se organiza mediante un flujo de trabajo, cuya característica es combinar una serie de scripts, algoritmos y metadatos, de forma que un mismo contenido se adapte a distintos tipos de publicaciones, productos digitales e incluso, publicaciones impresas. Una consecuencia de esta característica es que en un solo paso se generan múltiples archivos y publicaciones digitales para distintos propósitos, dispositivos y plataformas:</p>
+<ul>
+<li>Archivo del código fuente de la publicación en formato de extensión .md (<em>Markdown</em>) completo con rutas de acceso a imágenes estáticas para una fácil conversión a la plataforma del editor.</li>
+<li>Edición web HMTL para el libro de acceso abierto, con <em>iframes</em> integrados a gráficos, videos, <em>gifs</em> y mapas interactivos.</li>
+<li>Edición impuesta para imprenta (original de pre-prensa), lectura digital en formato PDF enriquecido.</li>
+<li>Edición en formato EPUB de acceso abierto, con <em>iframes</em> integrados a gráficos, videos, <em>gifs</em> y mapas interactivos.</li>
+<li>Edición en formatos de extensión .doc (Microsoft Word) y .odt (Libreoffice) para obras derivadas, revisiones y comentarios.</li>
+</ul>
+<p>Entonces, a diferencia de lo que ocurre en un flujo de trabajo editorial de tipo lineal, que requiere de la creación de archivos y códigos distintos para diferentes tipos de ediciones y publicaciones; en el esquema del flujo de trabajo ramificado, la producción de los originales, el seguimiento del proceso editorial, la revisión, la corrección, las colaboraciones y el control de cambios, ocurren todos sobre un mismo archivo y de forma paralela.</p>
+<p>Todo esto a su vez se relaciona con determinados modos de editar (colaborativos y descentralizados), formas de poner el contenido en los soportes (líquida, abierta y distribuida), y las estrategias comerciales y de promoción de ventas.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:workflow"></span>
+<img src="images/workflow.png" alt="Esquema simplificado de las etapas generales del flujo de trabajo, componer, compilar y publicar en múltiples formatos" width="80%" />
+<p class="caption">
+Figura 1.1: Esquema simplificado de las etapas generales del flujo de trabajo, componer, compilar y publicar en múltiples formatos
+</p>
+</div>
+<div id="sobre-bookdown-extensiones-y-software-complementario" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Sobre <em>Bookdown</em>, extensiones y software complementario</h2>
+<p>El flujo de trabajo está desarrollado en <a href="https://bookdown.org">Bookdown</a>, un paquete de código abierto para el lenguaje de programación <a href="https://www.r-project.org/">R</a>, creado por Yihui Xie para la aplicación de escritorio gratuita <a href="https://rstudio.com/">RStudio</a>. Aunque mucha gente usa <em>R</em> para análisis estadístico, <em>RStudio</em> también es compatible con varias soluciones de publicación ramificada. Así, los pasos que forman parte de las tres grandes etapas (componer, compilar y publicar) de este flujo de trabajo estan determinadas por <em>Bookdown</em>:</p>
+<ol style="list-style-type: decimal">
+<li>Durante la etapa de composición:</li>
+</ol>
+<ul>
+<li><p>Configuración de los archivos de <em>Bookdown</em> de forma que cada capítulo/ sección conste de un archivo de <em>R Markdown</em> (extensión .Rmd).</p></li>
+<li><p>Organización de las citas, fuentes y referencias utilizando el gestor bibliográfico <a href="https://zotero.org/">Zotero</a> desarrollado por el <a href="https://rrchnm.org/">Centro Roy Rosenzweig de Historia y Nuevos Medios de la Universidad George Mason</a>. Además, hay que instalar la extensión <a href="https://github.com/retorquere/zotero-better-bibtex">Better BibTeX</a> para crear claves de citas en <em>Zotero</em> compatibles con <em>Bookdown</em>.</p></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Durante la etapa de compilación:</li>
+</ol>
+<ul>
+<li><p>Creación de los archivos de salida utilizando el conversor universal de documentos <a href="https://pandoc.org/">PanDoc</a> y el software de preparación de documentos <a href="https://www.latex-project.org/">LaTeX</a>.</p></li>
+<li><p>Configuración de los datos de identificación en fuente y la capa de <a href="licencias.html#licencias">licenciamiento</a> libre (<em>copyleft</em>) o abierto (<em>Creative Commons</em>) en el archivo <code>index.Rmd</code> mediante una plantilla específica que se compila con el original.</p></li>
+<li><p>Definición diferencial de contenido en función del formato de salida usando fragmentos de código de <em>R</em>. Esto se puede hacer incluso durante el proceso de escritura para hacer publicaciones parciales, generar capítulos promocionales, desarrollar la audiencia y hasta abrir la posibilidad de incorporar comentarios de lectorxs y colaboradores. Con las revisiones de cada jornada de trabajo se puede recompilar el libro, publicar las ediciones en el repositorio público de <em>GitHub</em> y usar el <a href="https://pages.github.com/">generador de sitios estáticos integrado</a> para alojar el formato web HTML de la publicación (libro/ publicación web).</p></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Durante la etapa de publicación:</li>
+</ol>
+<ul>
+<li><p>Subida de los archivos fuente a un repositorio de <a href="https://github.com/"><em>GitHub</em></a> (repo), que además de hacer posible la disposición pública de la publicación en internet mediante un sitio web; permite al equipo editorial, conocer las versiones del texto que se generan (traducción, corrección, revisión, ramificación, reedición, erc), planificar el proyecto, seguir el desarrollo del proceso editorial y a los autores, trabajar simultáneamente en el libro/ publicación en un repositorio común^[Para acceder al repositorio de <em>GitHub</em> de este trabajo a modo de ejemplo, visitar: <a href="https://github.com/etalii/tepepub" class="uri">https://github.com/etalii/tepepub</a>).</p></li>
+<li><p>Implementar el modelo de <a href="https://docs.microsoft.com/es-es/devops/deliver/what-is-infrastructure-as-code">infraestructura como código</a> para alojar el libro/ publicación web gratuitamente mediante <em>GitHub pages</em> (hosting). De esta forma, el sitio web que se genera, no solamente funciona como un producto editorial en sí, sino que además puede funcionar como interfaz de acceso al resto de las versiones de la publicación o ediciones (pdf, epub, mobi ,docx y md).</p></li>
+</ul>
+<p>Sin embargo, la descripción del flujo de trabajo desarrollado en <em>Bookdown</em> que se hace aquí, no es exhaustiva y comprende solo un conjunto de elementos de análisis pertinentes a los contenidos del Seminario de Publicaciones Digitales. Para obtener más detalles técnicos sobre <em>Bookdown</em> y ejemplos de otras publicaciones creadas con esta herramienta, se puede consultar <a href="https://bookdown.org" class="uri">https://bookdown.org</a>.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="cómo-instalar-y-configurar-bookdown" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Cómo instalar y configurar <em>Bookdown</em></h2>
+<p>A continuación, se enumeran los pasos que hay que seguir para configurar la plataforma de publicación (<em>Bookdown</em>) y las herramientas relacionadas necesarias para compilar este trabajo, utilizando <em>Ubuntu 20.04</em>. Esto no requiere conocimientos especiales sobre <em>Linux</em>, de forma que los pasos para la instalación y la configuración en <em>Ubuntu</em>, si bien son diferentes, son similares a los que se deben seguir para <em>Windows</em> y <em>MacOs</em>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Instalar el lenguaje de programación <em>R</em>, requerido para usar <em>Bookdown</em>.</p></li>
+<li><p>Instalar la versión gratuita de <em>RStudio Desktop</em> para facilitar el uso de <em>R</em> mediante la interfaz gráfica del editor de texto. Algunes autores componen sus textos directo en <em>RStudio</em>, pero es recomendable usar algún editor de texto (como <a href="https://docutopia.tupale.co/">HedgeDoc</a> ), ya que estos suelen tener comandos, atajos y opciones específicas que hacen más ágil la escritura.</p></li>
+<li><p>Dentro de <em>RStudio</em>, dirigirse a la pestaña “ <em>Packages</em> ” y seleccionar “ <em>Install</em> ” ( <a href="images/packages-install.png">ver captura de pantalla</a> ).</p></li>
+<li><p>Dentro de <em>RStudio</em>, instalar el paquete " <em>bookdown</em> " y seleccionar “ <em>Install Dependencies</em> ” ( <a href="images/bookdown-install.png">ver captura de pantalla</a> ).</p></li>
+<li><p>Para que <em>Bookdown</em> cree la versión de la publicación en PDF hay que instalar un motor de <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> que transforme los formatos de las citas e imágenes de <em>Markdown</em> a estilos de página preconfigurados. Dado que <em>LaTeX</em> es muy pesado, la documentación de <em>Bookdown</em> recomienda el paquete <em>TinyTeX</em> que es más ligero. Para instalarlo, dentro de <em>RStudio</em> hay que seleccionar la pestaña “ <em>Packages</em> ”, seleccionar “ <em>Install</em> ” y tipear " <em>tinytex</em> " para buscar y cargar el paquete ( <a href="images/tinytex-install.png">ver captura de pantalla</a> ).</p></li>
+<li><p>Para terminar de instalar " <em>tinytex</em> " hay que escribir <code>tinytex :: install_tinytex ()</code> en la consola de RStudio y presionar “ <em>return</em> ”. ( <a href="images/tinytex-finish.png">ver captura de pantalla</a> )</p></li>
+<li><p>Junto con la instalación de <em>RStudio</em>, hay que instalar <em>Pandoc</em>, el paquete que convierte archivos del formato <em>Markdown</em> a HMTL y otros formatos. Para confirmar la instalación de <em>Pandoc</em> y el número de versión hay que escribir <code>rmarkdown :: pandoc_version ()</code> en la consola de <em>RStudio</em>, y presionar “ <em>return</em> ”. El número de la versión instalada debe ser 2.3.1 o superior. Para instalar una versión más reciente de <em>Pandoc</em>, que es muy recomendable, dirigirse a <a href="https://pandoc.org" class="uri">https://pandoc.org</a>.</p></li>
+</ol>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Para acceder a la versión web y demás formatos de salida de este trabajo, visitar: <a href="https://etalii.github.io/tepepub/" class="uri">https://etalii.github.io/tepepub/</a> <a href="intro.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>- Xie, Yihui. Bookdown: Authoring Books and Technical Documents with R Markdown. Chapman &amp; Hall/CRC, 2018. <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>. - Xie, Yihui, J. J. Allaire, and Garrett Grolemund. R Markdown: The Definitive Guide. Chapman &amp; Hall/CRC, 2020. <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a>. - Xie, Yihui, Christophe Dervieux, and Emily Riederer. R Markdown Cookbook. Chapman &amp; Hall/CRC, 2020. <a href="https://bookdown.org/yihui/rmarkdown-cookbook/" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/</a>.<a href="intro.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="licencias.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="componer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["tepepub.pdf", "tepepub.epub", "tepepub.mobi"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+# Componer
+
+## Estructura de archivos y encabezados
+
+En general, cada capítulo es un archivo .Rmd independiente. Esto implica que, en caso de editar el contenido de la publicación en simultáneo, les coautorxs tienen que trabajar en diferentes capítulos del libro y enviar regularmente _commits_ al repositorio. Una alternativa para evitar conflictos en el repositorio es trasladar el proceso de escritura a un editor de texto externo especializado en _Markdown_ que tenga control de versiones, que sea colaborativo y multiplataforma, como _HedgeDoc_. Del mismo modo, es recomendable que solamente une miembrx del equipo compile regularmente el libro con _Bookdown_ para evitar conflictos de combinación de código. 
+
+A continuación se propone un esquema simplificado de la estructura del archivo raíz en el repositorio de _GitHub_:
+
+- Prefacio de la publicación con secciones no numeradas: `index.Rmd` 
+
+- Capítulos con encabezados de primer nivel en este formato: `01-capitulo.Rmd` 
+
+- Secciones dentro de los capítulos con encabezados de segundo nivel en este formato: `01.1-subcapítulo.Rmd`. 
+
+- La carpeta de imágenes, donde se encuentran las imágenes PNG, JPG y PDF que se van a renderizar y mostrar en los capítulos. 
+
+- La carpeta _docs_, que contiene los archivos fuente de la publicación, como la edición Web (`index.html`, `Introduccion.html`, etc.), la salida PDF, etc. 
+
+- Archivos auxiliares adicionales que se describen más adelante.  
+
+Una forma que ofrece _Bookdown_ para manejar las referencias cruzadas es la asignación de un ID predeterminado a cada encabezado. Por ejemplo, el ID predeterminado para `# Tema` es `{#topic}`, y el ID predeterminado para `## Nombre de sección` es `{# nombre-de-sección}`, donde los espacios se reemplazan por guiones.
+
+Como los IDs predeterminados pueden cambiar debido a la edición o estar duplicados en la publicación, en su lugar se puede asignar manualmente un ID único a cada encabezado de primer y segundo nivel de la siguiente manera, de forma que es importante tener en cuenta que el símbolo {-}, usado solo o en combinación con un espacio y una identificación única, evita la numeración automática en los encabezados de segundo a cuarto nivel: 
+
+```
+# Título de capítulo de primer nivel de jerarquía {#nombre-único}
+## Título de sección de segundo nivel de jerarquía {- #nombre-único}
+### Título de sección de tercer nivel de jerarquía {-}
+#### Título de sección de cuarto nivel de jerarquía {-}
+```
+
+Además, es posible hacer coincidir la palabra clave ID única con el nombre del archivo para los capítulos de nivel superior de esta manera: `01-palabra-clave.Rmd` para mayor organización. Los nombres únicos deben contener solamente caracteres alfanuméricos (a-z, A-Z, 0-9) o guiones (-). A su vez, los subtítulos deben tener nombres o IDs únicos para evitar errores de _Bookdown_ sobre referencias duplicadas. Para evitar este problema con los subtítulos repetidos (como podría darse en el uso de una sección "Resumen"), al final de cada capítulo se puede insertar un subtítulo de resumen de tercer nivel, pero para eso hay que usar un ID único que coincida con el número de cada capítulo, como este: `### Resumen {- # resumen17}`. Del mismo modo, un encabezado especial podría constituir por ejemplo, un apéndice e indicarse con `(APÉNDICE)`. indicando que todos los capítulos que aparecen después son apéndices. Según _Bookdown_, el estilo de numeración aparecerá correctamente en la salida HTML y LaTeX / PDF, pero no en .doc y otros formatos de libros / publicaciones electrónicos. 
+
+```
+# Capítulo Uno
+
+# Capítulo Dos
+
+# (APÉNDICE) Apéndice {-}
+
+# Apéndice A
+
+# Apéndice B
+```
+
+Por otro lado, en el archivo `index.Rmd` del directorio de trabajo del proyecto se configuran las opciones para la salida del libro/ publicación HTML y la salida PDF. La configuración `toc_depth: 2` muestra los encabezados de los capítulos y secciones hasta el segundo nivel en la Tabla de contenido. 
+
+La configuración de la opción `split_by:` divide las páginas HTML en el encabezado del segundo nivel, lo que crea páginas web más cortas con un desplazamiento reducido para les lectorxs. Para cada página web, el ID único se convierte en el nombre del archivo y se almacena en la subcarpeta _docs_. 
+
+La configuración de `number_sections` tiene que tener valor _true_ (verdadero) para las ediciones HTML y PDF, y el valor toc_depth en 2, esto significa que se va a mostrar la numeración de sección de capítulo de dos niveles (1.1, 1.2, etc.) en la tabla de contenidos. Hay que tener en cuenta que `number_sections` debe ser verdadero para mostrar los números de figura y tabla en formato x.x. La configuración relevante se puede consultar en este extracto del archivo `index.Rmd`: 
+
+```
+output:
+  bookdown::gitbook:
+    ...
+    toc_depth: 2
+    split_by: section
+    number_sections: true
+    split_bib: false
+    ...
+bookdown::pdf_book:
+  toc_depth: 2
+  number_sections: true
+```
+
+Es importante tener en cuenta que en la configuración de `_bookdown.yml`, todas las salidas estan integradas en la subcarpeta _docs_ del repositorio de _GitHub_, como se muestra en este extracto:
+
+```
+output_dir: "docs"
+delete_merged_file: true
+book_filename: "Título"
+language:
+  label:
+    fig: "Figura "
+    tab: "Tabla "
+chapter_name: "Capitulo "
+```
+
+Si en el repositorio de _GitHub_ se llevaron a cabo las configuraciones tales que el sitio se publique en la web mediante `main / docs`, significa que lxs lectores pueden explorar los archivos de origen en el nivel raíz y ver las páginas web HTML alojadas en la subcarpeta de documentos. La subcarpeta de documentos también puede contener los siguientes elementos, que no son generados por _Bookdown_ y deben crearse manualmente: 
+
+- Archivo `CNAME` para el dominio personalizado, generado por _GitHub Pages_. 
+
+- Archivo `.nojekyll` vacío y oculto para garantizar un procesamiento rápido de archivos HTML por _GitHub Pages_. 
+
+- Archivo `404.html` personalizado para redirigir cualquier dirección web errónea bajo el dominio a la página `index.html`.
+
+Una opción más es copiar el código de _Google Analytics_ para el libro web, pegarlo en un archivo HTML en el repositorio del libro e incluir esta referencia en el código `index.Rmd`: 
+
+```
+output:
+  bookdown::gitbook:
+  ...
+  includes:
+    in_header: google-analytics.html
+```
+
+## Hoja de estilo
+
+Sobre la base de lo que establecen las reglas de formato y estilo propias de _Markdown_, es posible aplicar una serie de criterios técnicos y estilísticos para editar y escribir de manera consistente usando _Bookdown_. La guía de estilo de [O'Reilly](https://oreillymedia.github.io/production-resources/styleguide/) propone una serie de pautas específicas para formatos electrónicos, que abarcan entre otros temas, la estructura de capitulos, las transiciones y el uso de enlaces externos e incrustados, ya sea en línea corrida o en bloque.
+
+Por otro lado, cada capítulo o sección de una publicación de _Bookdown_ está maquetado por un archivo _Markdown_ de _R_ (.Rmd) separado; mientras que en cada archivo `.Rmd`, cada párrafo comienza en una línea aparte. A modo de ejemplo, acá se puede ver el [código fuente de esta página](pegar link del archivo en gh).
+
+## Uso del formato condicional
+
+El formato condicional ofrece la opción de mostrar texto o imágenes en algunas ediciones de la publicación, pero no en otras. A continuación, se muestran varias formas de utilizar el formato condicional:
+
+Insertar un comentario de código HTML `<! - Comment ->` en el archivo `.Rmd` para ocultar algunas líneas de texto. Esto aparece como texto comentado en los formatos HTML y .md, por ende, no se muestra en el navegador HTML y no aparece de ninguna manera en los formatos PDF o .doc .
+
+La función del paquete de _R_ `is_ [html / latex] _output` permite adecuar la salida condicional a diferentes publicaciones, de forma que por ejemplo, el texto sea visible en la edición HTML pero no en la edición PDF, o viceversa.
+
+Personalizar el código de las hojas de estilo en _CSS_ ( `style.css` ) de la publicación web. 
+
+Opción de agregar encabezados, pies de página y bajadas al texto en las versiones HTML o _LaTeX_.
+ 
+Compilar diferentes versiones de la publicación en HTML y _LaTeX_ / PDF que se compongan de los mismos capítulos/ secciones en distinto órden, mediante la enumeración diferencial en el archivo` _bookdown.yml`. De esta manera es posible publicar todos los capítulos / secciones para la versión HTML, mientras que solamente se compilen los capítulos seleccionados en el PDF:
+
+```
+# cuando se compilan todos los capítulos para un libro/ publicación HTML hay que comentarlos todos, mientras que se tiene que  eliminar el comentario para omitir los capítulos que no se enumeran a continuación de las versiones PDF y _Markdown_ para ORM
+
+
+# rmd_files: [
+#   "index.Rmd",
+#   "0.0-introduction.Rmd",
+#   "01-choose.Rmd",
+#   "02-spreadsheet.Rmd",
+#   "03-find.Rmd",
+#   "04-clean.Rmd",
+#   "05-comparisons.Rmd",
+#   "06-chart.Rmd",
+#   "07-map.Rmd",
+#   "08-table.Rmd",
+#   "09-embed.Rmd",
+#   "10-github.Rmd",
+#   "11-chartcode.Rmd",
+#   "12-leaflet.Rmd",
+#   "13-transform.Rmd",
+#   "14-detect.Rmd",
+#   "15-story.Rmd",
+#   "16-fix.Rmd",
+#   "21-references.Rmd"
+# ]
+```
+
+### Manejo de referencias cruzadas
+
+Para hacer una referencia cruzada en _Bookdown_ hay que asignar un nombre único o una etiqueta de fragmento de código de R a cada capítulo/ sección, figura y tabla. Los nombres y etiquetas únicos deben contener solo caracteres alfanuméricos (a-z, A-Z, 0-9) o guiones (-).
+
+A diferencia de lo que plantea el [manual de Bookdown](https://bookdown.org/yihui/bookdown/cross-references.html), es conveniente evitar usar enlaces de ID únicos para hacer referencias cruzadas de capítulos o secciones, ya que estos crean URLs imprecisas y hashtags extraños para secciones subordinadas.
+
+Para hacer una referencia cruzada a cualquier capítulo o sección, es preferible usar un enlace HTML de nombre único, como `index.html` o `style-guide.html` .
+
+Para hacer referencias cruzadas de figuras y tablas, mostrar su numeración automática y permitir que les lectorxs salten allí, hay que escribir una llamada con una referencia de _Bookdown_ a una etiqueta de fragmento de código, como `Ver Figura \@ref(fig:nombre-de-la-imagen)`  o  `Ver Tabla \@ref(tab:nombre-de-la-tabla)`.
+
+- Además, la interactividad de las referencias cruzadas varía según la salida de la siguiente forma:
+
+- En HTML, se puede hacer clic en todas las referencias cruzadas.
+
+- En PDF, se puede hacer clic en todas las referencias cruzadas, excepto los enlaces HTML a nivel de capítulo.
+
+- En doc y odt, no se puede hacer clic en referencias cruzadas.
+
+## Imágenes y formato de los fragmentos de código
+
+En general, es recomendable usar imágenes en formato PNG (preferido ante JPG debido a la pérdida de información). Los archivos de imagen se deben guardar en la subcarpeta de imágenes que corresponde a cada capítulo. En caso de que uno de los archivos de salida sea el original de prensa para generar copias físicas impresas, hay que asegurarse de que las imágenes en color estén en alto contraste y/o sombreado, ya que el editor las convertirá a escala de grises para la publicación / el libro impresa/o. Además, los nombres de los archivos se tienen que escribir en minúsculas con guiones (no espacios) y comenzar con la palabra clave de la sección correspondiente, para que las imágenes relacionadas se mantengan agrupadas. Incluso si estan en carpetas separadas, hay que evitar nombres de archivo de imagen duplicados para toda la publicación. También hay que evitar numerar las imágenes, ya que es posible que no coincidan con la secuencia final.
+
+Dado que las imágenes PNG grandes a veces parecen demasiado grandes en la edición PDF, es recomendable convertir una copia en una imagen PDF más pequeña para que se ajuste mejor. Para esto se pueden procesar las imágenes en lotes, ya sea desde la terminal - usando el comando `convert` de bash-, o desde la interfaz gráfica del sistema operativo que se esté utilizando. Como resultado, una imagen simple puede tener solo un archivo en la carpeta de imágenes, pero las imágenes grandes y complejas pueden constar de varios archivos.
+
+Usando la sintaxis de _R Markdown_, _Bookdown_ hace posible crear diferentes versiones de imágenes para diferentes ediciones. Así, para cada imagen se puede requerir un conjunto distinto de instrucciones para mostrar un gráfico/ mapa/ video interactivo usando, por ejemplo, un _iframe_ incrustado en la edición web HTML, pero mostrar una imagen PNG estática en la edición completa de _Markdown_, o sustituir un PDF estático más pequeño cuando esté disponible en la edición del libro PDF. 
+
+Esta solución se basa en el formato de fragmentos de código de _R_ para la mayoría de las imágenes, con algunas excepciones. Esta sintaxis _R Markdown_ / _Bookdown_ es más compleja que el formato de imagen _Markdown_ básico, pero admite el formato condicional y los subtítulos en todas las ediciones, así como la numeración automática en las ediciones HMTL y _LaTeX_/ PDF. El formato general de imagen de los fragmentos de código de _R_ se ve más o menos así:
+
+```
+...como se muestra en la Figura \@ref(fig: palabra-clave/ nombre de la imagen sin extensión).
+
+(ref: palabra-clave/ nombre de la imagen sin extensión) Leyenda con enlaces en formato _Markdown_, pero sin la posibilidad de establecer notas al pie.
+
+{r keyword, fig.cap="(ref:keyword)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://nombre-de-ruta-a-la-version-interactiva-palabra-clave-o-nombre-de-la-imagen-sin-extensión.html")
+else knitr::include_graphics("nombre-de-ruta-a-la-version-estatica-nombre-de-la-imagen.png")
+```
+
+Donde la primera línea genera una llamada de referencia cruzada de figura numerada automáticamente y en la que se puede hacer clic. La numeración automática aparece en formato de _figura x.x_ en HTML, PDF, odt y doc, pero en formato _figura x_ en _Markdown_. Esta llamada es importante porque las imágenes en la salida PDF "flotarán" por diseño y pueden aparecer antes o después de la página deseada.
+
+La segunda línea contiene el título con enlaces opcionales en formato _Markdown_. Pero no se debe insertar notas al pie con claves de citas de _Zotero_, ya que van a generar errores en la salida PDF. Las notas al pie detalladas sobre las fuentes de las imágenes, se deben insertar en el cuerpo del texto y usar el título solo para una breve mención de “Fuente:”.
+
+El tercer bloque es el fragmento de código de _R_. En la práctica, el fragmento de código se separa de las otras dos líneas usando tres marcas de verificación de código, omitidas aquí por simplicidad. La primera parte hace referencia a la palabra clave en la llamada y también al título anterior. La última parte puede simplemente indicarle a _Bookdown_ que incluya una imagen estática (cuando no hay una versión interactiva), o puede incluir una declaración `if-else` para formato condicional cuando existen versiones, tanto interactivas, como estáticas.
+
+La declaración if para la salida HTML contiene `(excludes = "markdown")` porque _Markdown_ se considera un formato HTML, como se describe en el [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html). Dado que la plataforma del editor aceptará una versión _Markdown_ completa de la publicación, que muestra imágenes estáticas en lugar de visualizaciones interactivas, debemos generar el archivo "markdown" de manera diferente a la edición web HTML.
+
+Las etiquetas de fragmentos de código de _R_ tienen que tener la misma palabra clave que el nombre del archivo de la imagen. Acá también hay que evitar usar etiquetas duplicadas para toda la publicación y usar solamente letras, números y guiones medios (no guiones bajos): 
+
+```
+ref:palabra-clave-con-guiones
+
+images/07-ejemplo/nombre-de-la-imagen-con-guiones.png
+```
+
+Hay que prestar especial cuidado de forma de no insertar espacios dentro de la etiqueta `ref:palabra-clave-con-guiones` para el título. Pero sí es deseable agregar una línea en blanco para separarlo del fragmento de código. Después del fragmento de código, hay que agregar otra línea en blanco para evitar errores de tipo “undefined reference” ("referencia indefinida").     
+
+No es recomendable usar caracteres como `<` o `>` o `"` dentro del título de referencia del fragmento de código de _R_, ya que van a arrojar errores de HTML en las imágenes de salida de _Markdown_. En su lugar, se pueden usar caracteres como `*` y `-` para designar instrucciones, como por ejemplo: “Archivo - Hacer una copia”.
+
+Por último, en el archivo `index.Rmd` de todo proyecto de _Bookdown_ es posible llevar a cabo una serie de configuraciones globales de fragmentos de código de _R_. Así, es recomendable que justo inmediatamente después del primer encabezado ( `# Portada` en el caso de la publicación de este trabajo) se configure que toda imagen del proyecto que se inserte con fragmentos de código, lo haga sin “eco”. Esto quiere decir que solo se muestre la imagen y no el código utilizado para generar esa imagen. La otra configuración recomendable es la que inserta automáticamente la versión PDF de una imagen PNG/JPG, siempre que exista, en la salida PDF, lo que permite reducir manualmente el tamaño de las imágenes grandes que se muestran en el libro/ publicación PDF ^[Para leer más sobre estas opciones, consultar la entrada en el capítulo de la documentación de _Bookdown_: https://bookdown.org/yihui/bookdown/figures.html.].
+
+## Demostración: fragmento de código de _R_ para imagen estática en todas las ediciones: HTML, PDF, ODT, DOCX y MD
+
+...como se muestra en la Figura \@ref(fig:sample-image).
+
+(ref:sample-image) Leyenda con enlaces en formato _Markdown_, pero sin la posibilidad de establecer notas al pie
+
+```{r sample-image, fig.cap="(ref:sample-image)"}
+ knitr::include_graphics("images/sample-image.png")
+```
+
+```
+
+...como se muestra en la Figura \@ref(fig:sample-image).
+
+(ref:sample-image)Leyenda con enlaces en formato _Markdown_, pero sin la posibilidad de establecer notas al pie
+
+  (```){r sample-image, fig.cap="(ref:sample-image)"}
+    knitr::include_graphics("images/sample-image.png")
+  (```)
+
+* los paréntesis son ilustrativos y se tienen que eliminar para que el fragmento de código funcione
+
+```
+
+## Demostración: fragmento de código de _R_ para iframe en HTML e imagen estática en PDF, ODT, DOCX y MD
+
+...como se muestra en la Figura \@ref(fig:sample-map).
+
+(ref:sample-map) Explorar el mapa interactivo de [OSM](https://www.openstreetmap.org/note/3023469). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática.
+
+```{r sample-map, fig.cap="(ref:sample-map)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.openstreetmap.org/note/3023469", height = "375px") else knitr::include_graphics("images/sample-map.png")
+```
+
+```
+...como se muestra en la Figura \@ref(fig:sample-map).
+
+(ref:sample-map) Explorar el mapa interactivo de [OSM](https://www.openstreetmap.org/note/3023469). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática.
+
+(```){r sample-map, fig.cap="(ref:sample-map)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.openstreetmap.org/note/3023469", height = "375px") else knitr::include_graphics("images/sample-map.png")
+(```)
+
+```
+
+## Demostración: fragmento de código de _R_ para GIF animado en HTML e imagen estática en PDF, ODT, DOCX y MD
+
+...como se muestra en la Figura \@ref(fig:sample-gif).
+
+(ref:sample-gif) Ver un [GIF animado](https://etalii.github.io/tepepub/images/sample.gif). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+
+```{r sample-gif, fig.cap="(ref:sample-gif)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/sample-gif.gif", height = "250px") else knitr::include_graphics("images/sample-gif.png")
+```
+
+```
+
+...como se muestra en la Figura \@ref(fig:sample-gif).
+
+(ref:sample-gif) Ver un [GIF animado](https://etalii.github.io/tepepub/images/sample.gif). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+
+(```){r sample-gif, fig.cap="(ref:sample-gif)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/sample-gif.gif", height = "250px") else knitr::include_graphics("images/sample-gif.png")
+(```)
+
+```
+
+## Demostración: fragmento de código de _R_ para incrustar video en HTML e imagen estática en PDF, ODT, DOCX y MD
+
+Para esto hay que asegurarse de usar el enlace de inserción de _YouTube_, _Vimeo_ o cualquiera sea la fuente del video en la web.
+
+...como se muestra en el Video \@ref(fig:sample-video)
+
+(ref:sample-video) Ver un [video en YouTube](https://www.youtube.com/watch?v=dVqVscgwSpw). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+
+```{r sample-video, fig.cap="(ref:sample-video)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/dVqVscgwSpw") else knitr::include_graphics("images/sample-image2.png")
+```
+
+```
+...como se muestra en el Video \@ref(fig:sample-video)
+
+(ref:sample-video) Ver un [video en YouTube](https://www.youtube.com/watch?v=dVqVscgwSpw). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+
+(```){r sample-video, fig.cap="(ref:sample-video)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.youtube.com/embed/dVqVscgwSpw") else knitr::include_graphics("images/sample-image2.png")
+(```)
+
+```
+
+## Manejo de tablas en formato _Markdown_
+
+La creación de tablas en formato Markdown se puede gestionar mediante [Tables Generator](https://www.tablesgenerator.com/markdown_tables) que además de producir buenos resultados para HTML, PDF, odt, doc y _Markdown_ permite importar datos de tablas en formato CSV.
+
+El código de la tabla _Markdown_ que se muestra a continuación se tiene que agregar a la numeración automática (Tabla x) en HTML, PDF, odt y doc (Ver Tabla \@ref(tab:left-table)).
+
+Table: (\#tab:left-table) Contenido alineado a izquierda. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+
+| Un encabezado muy muy largo | Encabezado corto | Encabezadito |
+|:---------|:---|:---|
+| Contenido alineado a la izquierda | número/ texto | número/ texto |
+| Se pueden usar guines para obtener columnas más grandes | número/ texto | número/ texto |
+
+Se compone así:
+
+```
+
+...(Ver Tabla \@ref(tab:left-table)).
+
+Table: (\#tab:left-table) Contenido alineado a izquierda. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+
+| Un encabezado muy muy largo | Encabezado corto | Encabezadito |
+|:---------|:---|:---|
+| Contenido alineado a la izquierda | número/ texto | número/ texto |
+| Se pueden usar guines para obtener columnas más grandes | número/ texto | número/ texto |
+
+```
+
+Si queremos que el contenido esté alineado a la derecha como se muestra en la Tabla \@ref(tab:right-table)
+
+Tabla: (\#tab:right-table) Contenido alineado a la derecha. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+
+| Encabezado1 | Encabezado2 | Encabezado3 |
+|-----:|-----:|-----:|
+| 123 | 456 | 789 |
+| Contenido alineado a la derecha | numerical content  | with right-colons |
+| la misma cantidad de guiones | entre las columnas de la línea en blanco | garantiza mismo tamaño de columnas |
+
+Se debe componer así:
+
+```
+
+...como se muestra en la Tabla \@ref(tab:right-table)
+
+Tabla: (\#tab:right-table) Contenido alineado a la derecha. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+
+| Encabezado1 | Encabezado2 | Encabezado3 |
+|-----:|-----:|-----:|
+| 123 | 456 | 789 |
+| Contenido alineado a la derecha | contenido numérico | contenido numérico |
+| la misma cantidad de guiones | entre las columnas de la línea en blanco | garantiza mismo tamaño de columnas |
+
+```

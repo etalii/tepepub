@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 2 Componer | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto</title>
+  <meta name="description" content="TPF y documentación" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 2 Componer | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://etalii.github.io/tepepub/" />
+  <meta property="og:image" content="https://etalii.github.io/tepepub//images/portada.png" />
+  <meta property="og:description" content="TPF y documentación" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 2 Componer | “Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto" />
+  
+  <meta name="twitter:description" content="TPF y documentación" />
+  <meta name="twitter:image" content="https://etalii.github.io/tepepub//images/portada.png" />
+
+<meta name="author" content="Andrés Lemos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="compilar.html"/>
+<script src="libs/header-attrs/header-attrs.js"></script>
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>”Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada</strong><br>Andrés Lemos</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>&gt;</a></li>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html"><i class="fa fa-check"></i>Licencia de Producción de Pares (versión legible por humanes)</a>
+<ul>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html#bajo-las-condiciones-siguientes"><i class="fa fa-check"></i>Bajo las condiciones siguientes:</a></li>
+<li class="chapter" data-level="" data-path="licencias.html"><a href="licencias.html#entendiendo-que"><i class="fa fa-check"></i>Entendiendo que</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción: <em>Bookdown</em> como herramienta de publicación ramificada</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#sobre-bookdown-extensiones-y-software-complementario"><i class="fa fa-check"></i><b>1.1</b> Sobre <em>Bookdown</em>, extensiones y software complementario</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#cómo-instalar-y-configurar-bookdown"><i class="fa fa-check"></i><b>1.2</b> Cómo instalar y configurar <em>Bookdown</em></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="componer.html"><a href="componer.html"><i class="fa fa-check"></i><b>2</b> Componer</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="componer.html"><a href="componer.html#estructura-de-archivos-y-encabezados"><i class="fa fa-check"></i><b>2.1</b> Estructura de archivos y encabezados</a></li>
+<li class="chapter" data-level="2.2" data-path="componer.html"><a href="componer.html#hoja-de-estilo"><i class="fa fa-check"></i><b>2.2</b> Hoja de estilo</a></li>
+<li class="chapter" data-level="2.3" data-path="componer.html"><a href="componer.html#zotero-y-better-bibtex-para-las-notas-y-la-bibliografía"><i class="fa fa-check"></i><b>2.3</b> <em>Zotero</em> y <em>Better BibTeX</em> para las notas y la bibliografía</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="componer.html"><a href="componer.html#demostración-de-cita"><i class="fa fa-check"></i><b>2.3.1</b> Demostración de cita</a></li>
+<li class="chapter" data-level="2.3.2" data-path="componer.html"><a href="componer.html#manejo-de-referencias-cruzadas"><i class="fa fa-check"></i><b>2.3.2</b> Manejo de referencias cruzadas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="componer.html"><a href="componer.html#imágenes-y-formato-de-los-fragmentos-de-código"><i class="fa fa-check"></i><b>2.4</b> Imágenes y formato de los fragmentos de código</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-imagen-estática-en-todas-las-ediciones-html-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.1</b> Demostración: fragmento de código de <em>R</em> para imagen estática en todas las ediciones: HTML, PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.2" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-iframe-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.2</b> Demostración: fragmento de código de <em>R</em> para iframe en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.3" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-gif-animado-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.3</b> Demostración: fragmento de código de <em>R</em> para GIF animado en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.4" data-path="componer.html"><a href="componer.html#demostración-fragmento-de-código-de-r-para-incrustar-video-en-html-e-imagen-estática-en-pdf-odt-docx-y-md"><i class="fa fa-check"></i><b>2.4.4</b> Demostración: fragmento de código de <em>R</em> para incrustar video en HTML e imagen estática en PDF, ODT, DOCX y MD</a></li>
+<li class="chapter" data-level="2.4.5" data-path="componer.html"><a href="componer.html#manejo-de-tablas-en-formato-markdown"><i class="fa fa-check"></i><b>2.4.5</b> Manejo de tablas en formato <em>Markdown</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="compilar.html"><a href="compilar.html"><i class="fa fa-check"></i><b>3</b> Compilar</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="compilar.html"><a href="compilar.html#distintos-formatos-en-un-solo-paso"><i class="fa fa-check"></i><b>3.1</b> Distintos formatos en un solo paso</a></li>
+<li class="chapter" data-level="3.2" data-path="compilar.html"><a href="compilar.html#uso-del-formato-condicional"><i class="fa fa-check"></i><b>3.2</b> Uso del formato condicional</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="publicar.html"><a href="publicar.html"><i class="fa fa-check"></i><b>4</b> Publicar</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="publicar.html"><a href="publicar.html#github-y-el-código-como-infraestructura"><i class="fa fa-check"></i><b>4.1</b> <em>Github</em> y el código como infraestructura</a></li>
+<li class="chapter" data-level="4.2" data-path="publicar.html"><a href="publicar.html#el-libro-publicación-web-y-los-archivos-de-salida"><i class="fa fa-check"></i><b>4.2</b> El libro/ publicación web y los archivos de salida</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discusión-y-conclusión.html"><a href="discusión-y-conclusión.html"><i class="fa fa-check"></i><b>5</b> Discusión y conclusión</a></li>
+<li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/etalii/tepepub" target="blank">Ver repositorio de esta publicación en GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">“Deployando” Bookdown: un flujo de trabajo como modelo de edición digital ramificada basada en estructuras descentralizadas, software libre y código abierto</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="componer" class="section level1" number="2">
+<h1><span class="header-section-number"> 2</span> Componer</h1>
+<div id="estructura-de-archivos-y-encabezados" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Estructura de archivos y encabezados</h2>
+<p>En general, cada capítulo es un archivo .Rmd independiente. Esto implica que, en caso de editar el contenido de la publicación en simultáneo, les coautorxs tienen que trabajar en diferentes capítulos del libro y enviar regularmente <em>commits</em> al repositorio. Una alternativa para evitar conflictos en el repositorio, es trasladar el proceso de escritura a un editor de texto externo especializado en <em>Markdown</em> que tenga control de versiones, que sea colaborativo y multiplataforma, como <em>HedgeDoc</em>. Del mismo modo, es recomendable que solamente une miembrx del equipo compile regularmente el libro con <em>Bookdown</em> para evitar conflictos de combinación de código.</p>
+<p>A continuación se propone un esquema simplificado de la estructura del archivo raíz del proyecto (y disponible en el repositorio de <em>GitHub</em>):</p>
+<ul>
+<li><p>Prefacio de la publicación con secciones no numeradas: <code>index.Rmd</code></p></li>
+<li><p>Capítulos con encabezados de primer nivel en este formato: <code>01-capitulo.Rmd</code></p></li>
+<li><p>Secciones dentro de los capítulos con encabezados de segundo nivel en este formato: <code>01.1-subcapítulo.Rmd</code>.</p></li>
+<li><p>La carpeta de imágenes, donde se encuentran las imágenes PNG, JPG y PDF que se van a renderizar y mostrar en los capítulos.</p></li>
+<li><p>La carpeta <em>docs</em>, que contiene los archivos fuente de la publicación, como la edición Web (<code>index.html</code>, <code>Introduccion.html</code>, etc.), la salida PDF, etc.</p></li>
+<li><p>Archivos auxiliares adicionales que se describen más adelante.</p></li>
+</ul>
+<p>Una forma que ofrece <em>Bookdown</em> para manejar las referencias cruzadas es la asignación de un ID predeterminado a cada encabezado. Por ejemplo, el ID predeterminado para <code># Tema</code> es <code>{#tema}</code>, y el ID predeterminado para <code>## Nombre de sección</code> es <code>{# nombre-de-sección}</code>, donde los espacios se reemplazan por guiones.</p>
+<p>Como los IDs predeterminados pueden cambiar debido a la edición o estar duplicados en la publicación, en su lugar se puede asignar manualmente un ID único a cada encabezado de primer y segundo nivel de la siguiente manera:</p>
+<pre><code># Título de capítulo de primer nivel de jerarquía {#nombre-único}
+## Título de sección de segundo nivel de jerarquía {- #nombre-único}
+### Título de sección de tercer nivel de jerarquía {-}
+#### Título de sección de cuarto nivel de jerarquía {-}</code></pre>
+<p>De forma que es importante tener en cuenta que el símbolo {-}, usado solo o en combinación con un espacio y una identificación única, evita la numeración automática en los encabezados de segundo a cuarto nivel.</p>
+<p>Además, es posible hacer coincidir la palabra clave ID única con el nombre del archivo para los capítulos de nivel superior de esta manera: <code>01-palabra-clave.Rmd</code> para mayor organización. Los nombres únicos deben contener solamente caracteres alfanuméricos (a-z, A-Z, 0-9) o guiones (-). A su vez, los subtítulos deben tener nombres o IDs únicos para evitar errores de <em>Bookdown</em> sobre referencias duplicadas. Para evitar este problema con los subtítulos repetidos (como podría darse en el uso de una sección “Resumen”), al final de cada capítulo se puede insertar un subtítulo de resumen de tercer nivel, pero para eso hay que usar un ID único que coincida con el número de cada capítulo, como este: <code>### Resumen {- # resumen17}</code>. Del mismo modo, un encabezado especial podría constituir por ejemplo, un apéndice e indicarse con <code>(APÉNDICE)</code>. indicando que todos los capítulos que aparecen después son apéndices. Según la documentación de <em>Bookdown</em>, el estilo de numeración aparecerá correctamente en la salida HTML y LaTeX / PDF, pero no en .doc y otros formatos de libros / publicaciones electrónicos.</p>
+<pre><code># Capítulo Uno
+
+# Capítulo Dos
+
+# (APÉNDICE) Apéndice {-}
+
+# Apéndice A
+
+# Apéndice B</code></pre>
+<p>Por otro lado, en el archivo <code>index.Rmd</code> del directorio de trabajo del proyecto se configuran las opciones para la salida del libro/ publicación HTML y la salida PDF. La configuración <code>toc_depth: 2</code> muestra los encabezados de los capítulos y secciones hasta el segundo nivel en la Tabla de contenido.</p>
+<p>La configuración de la opción <code>split_by:</code> divide las páginas HTML en el encabezado del segundo nivel, lo que crea páginas web más cortas con un desplazamiento reducido para les lectorxs. Para cada página web, el ID único se convierte en el nombre del archivo y se almacena en la subcarpeta <em>docs</em>.</p>
+<p>La configuración de <code>number_sections</code> tiene que tener valor <em>true</em> (verdadero) para las ediciones HTML y PDF, y el valor toc_depth en 2, esto significa que se va a mostrar la numeración de sección de capítulo de dos niveles (1.1, 1.2, etc.) en la tabla de contenidos. Hay que tener en cuenta que <code>number_sections</code> debe ser verdadero para mostrar los números de figura y tabla en formato x.x. La configuración relevante se puede consultar en este extracto del archivo <code>index.Rmd</code>:</p>
+<pre><code>output:
+  bookdown::gitbook:
+    ...
+    toc_depth: 2
+    split_by: section
+    number_sections: true
+    split_bib: false
+    ...
+bookdown::pdf_book:
+  toc_depth: 2
+  number_sections: true</code></pre>
+<p>Es importante tener en cuenta que en la configuración de <code>_bookdown.yml</code>, todas las salidas estan integradas en la subcarpeta <em>docs</em> del repositorio de <em>GitHub</em>, como se muestra en este extracto:</p>
+<pre><code>output_dir: &quot;docs&quot;
+delete_merged_file: true
+book_filename: &quot;Título&quot;
+language:
+  label:
+    fig: &quot;Figura &quot;
+    tab: &quot;Tabla &quot;
+chapter_name: &quot;Capitulo &quot;</code></pre>
+<p>Si en el repositorio de <em>GitHub</em> se llevaron a cabo las configuraciones tales que el sitio se publique en la web mediante <code>main / docs</code>, significa que lxs lectores pueden explorar los archivos de origen en el nivel raíz y ver las páginas web HTML alojadas en la subcarpeta de documentos. La subcarpeta de documentos también puede contener los siguientes elementos, que no son generados por <em>Bookdown</em> y deben crearse manualmente:</p>
+<ul>
+<li><p>Archivo <code>CNAME</code> para el dominio personalizado, generado por <em>GitHub Pages</em>.</p></li>
+<li><p>Archivo <code>.nojekyll</code> vacío y oculto para garantizar un procesamiento rápido de archivos HTML por <em>GitHub Pages</em>.</p></li>
+<li><p>Archivo <code>404.html</code> personalizado para redirigir cualquier dirección web errónea bajo el dominio a la página <code>index.html</code>.</p></li>
+</ul>
+<p>Una opción más es copiar el código de <em>Google Analytics</em> para el libro web, pegarlo en un archivo HTML en el repositorio del proyecto e incluir esta referencia en el código <code>index.Rmd</code>:</p>
+<pre><code>output:
+  bookdown::gitbook:
+  ...
+  includes:
+    in_header: google-analytics.html</code></pre>
+</div>
+<div id="hoja-de-estilo" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Hoja de estilo</h2>
+<p>Sobre la base de lo que establecen las reglas de formato y estilo propias de <em>Markdown</em>, es posible aplicar una serie de criterios técnicos y estilísticos para editar y escribir de manera consistente usando <em>Bookdown</em>. La guía de estilo de <a href="https://oreillymedia.github.io/production-resources/styleguide/">O’Reilly</a> propone una serie de pautas específicas para formatos electrónicos, que abarcan entre otros temas, la estructura de capitulos, las transiciones y el uso de enlaces externos e incrustados, ya sea en línea corrida o en bloque.</p>
+<p>Por otro lado, cada capítulo o sección de una publicación de <em>Bookdown</em> está maquetado por un archivo <em>Markdown</em> de <em>R</em> (.Rmd) separado; mientras que en cada archivo <code>.Rmd</code>, cada párrafo comienza en una línea aparte. A modo de ejemplo, acá se puede ver el <a href="https://github.com/etalii/tepepub/02-componer.Rmd">código fuente de esta página</a>.</p>
+</div>
+<div id="zotero-y-better-bibtex-para-las-notas-y-la-bibliografía" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> <em>Zotero</em> y <em>Better BibTeX</em> para las notas y la bibliografía</h2>
+<p>Este flujo de trabajo basado en <em>Bookdown</em> permite utilizar el gestor bibliográfico de código abierto <em>Zotero</em>, en conjunto con la extensión <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, para simplificar el proceso de citar fuentes y crear bibliografías. Así, en lugar de escribir las referencias completas directamente en el texto, se puede insertar una breve clave de cita en el original de la publicación y las herramientas generarán automáticamente las referencias deseadas en el formato de preferencia, creando al final de la publicación, una bibliografía alfabética de todas las fuentes citadas.</p>
+<p>Para crear una cita, una vez instaladas las herramientas, se debe seguir la siguiente secuencia de pasos:</p>
+<ol style="list-style-type: decimal">
+<li><p>Crear una entrada para cada fuente (libro, artículo de revista, documento, etc.) en la biblioteca de <em>Zotero</em>.</p></li>
+<li><p>Seleccionar y cargar el estilo de cita preferido en formato <code>.csl</code>, cor ejemplo <code>apa.csl</code>.</p></li>
+<li><p>Para cada fuente, <em>Better BibTeX</em> genera una clave de cita única similar a esta <code>manovichLenguajeNuevosMedios2006</code>, que se puede pegar con formato para crear una nota en el original de la publicación.</p></li>
+</ol>
+<p>Por último, hay que tener en cuenta que cada vez que se crea un libro dentro de <em>Bookdown</em> hace falta exportar la biblioteca o colección de <em>Zotero</em> en formato .bib al repositorio de <em>Bookdown</em>. Esto genera el archivo que contiene los datos de referencia para que coincidan con las claves de cita en el texto.</p>
+<div id="demostración-de-cita" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Demostración de cita</h3>
+<p>Para generar una cita se debe ingresar la clave de cita en el siguiente formato y a continuación del fragmento que se desea referenciar, <code>[@manovichLenguajeNuevosMedios2006]</code>. Esto se va a visualizar de esta manera en los formatos de salida: <span class="citation">(<a href="bibliografía.html#ref-manovichLenguajeNuevosMedios2006" role="doc-biblioref">Manovich, 2006</a>)</span>.</p>
+</div>
+<div id="manejo-de-referencias-cruzadas" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Manejo de referencias cruzadas</h3>
+<p>Para hacer una referencia cruzada en <em>Bookdown</em> hay que asignar un nombre único o una etiqueta de fragmento de código de <em>R</em> a cada capítulo/ sección, figura y tabla. Los nombres y etiquetas únicos deben contener solo caracteres alfanuméricos (a-z, A-Z, 0-9) o guiones (-).</p>
+<p>A diferencia de lo que plantea el <a href="https://bookdown.org/yihui/bookdown/cross-references.html">manual de <em>Bookdown</em></a>, es conveniente evitar el uso de enlaces de ID únicos para hacer referencias cruzadas de capítulos o secciones, ya que estos crean URLs imprecisas y hashtags extraños para secciones subordinadas.</p>
+<p>Para hacer una referencia cruzada a cualquier capítulo o sección, es preferible usar un enlace HTML de nombre único, como <code>index.html</code> o <code>style-guide.html</code> .</p>
+<p>Para hacer referencias cruzadas de figuras y tablas, mostrar su numeración automática y permitir que les lectorxs salten allí, hay que escribir una llamada con una referencia de <em>Bookdown</em> a una etiqueta de fragmento de código, como <code>Ver Figura \@ref(fig:nombre-de-la-imagen)</code> o <code>Ver Tabla \@ref(tab:nombre-de-la-tabla)</code>.</p>
+<p>Además, la interactividad de las referencias cruzadas varía según la salida de la siguiente forma:</p>
+<ul>
+<li><p>En HTML, se puede hacer clic en todas las referencias cruzadas.</p></li>
+<li><p>En PDF, se puede hacer clic en todas las referencias cruzadas, excepto los enlaces HTML a nivel de capítulo.</p></li>
+<li><p>En doc y odt, no se puede hacer clic en referencias cruzadas.</p></li>
+</ul>
+</div>
+</div>
+<div id="imágenes-y-formato-de-los-fragmentos-de-código" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Imágenes y formato de los fragmentos de código</h2>
+<p>En general, es recomendable usar imágenes en formato PNG (preferido ante JPG debido a cuestiones de calidad del formato). Por otro lado, los archivos de imagen se deben guardar en la subcarpeta de imágenes que corresponde a cada capítulo. En caso de que uno de los archivos de salida sea el original de prensa para generar copias físicas impresas, hay que asegurarse de que las imágenes en color estén en alto contraste y/o sombreado, ya que le impresore las convertirá a escala de grises para la publicación / el libro impresa/o. Además, los nombres de los archivos se tienen que escribir en minúsculas con guiones (no espacios) y comenzar con la palabra clave de la sección correspondiente, para que las imágenes relacionadas se mantengan agrupadas. Incluso si estan en subcarpetas separadas, hay que evitar nombres de archivo de imagen duplicados para toda la publicación. También hay que evitar numerar las imágenes, ya que es posible que no coincidan con la secuencia final.</p>
+<p>Dado que las imágenes PNG grandes a veces parecen demasiado grandes en la edición PDF, es recomendable convertir una copia en una imagen PDF más pequeña para que se ajuste mejor. Para esto se pueden procesar las imágenes en lotes, ya sea desde la terminal - usando el comando <code>convert</code> de bash-, o desde la interfaz gráfica del sistema operativo que se esté utilizando. Como resultado, una imagen simple puede tener solo un archivo en la carpeta de imágenes, pero las imágenes grandes y complejas pueden constar de varios archivos.</p>
+<p>Usando la sintaxis de <em>R Markdown</em>, <em>Bookdown</em> hace posible crear diferentes versiones de imágenes para diferentes ediciones. Así, para cada imagen se puede requerir un conjunto distinto de instrucciones para mostrar un gráfico/ mapa/ video interactivo usando, por ejemplo, un <em>iframe</em> incrustado en la edición web HTML, pero mostrar una imagen PNG estática en la edición completa de <em>Markdown</em>, o sustituir un PDF estático más pequeño cuando esté disponible en la edición del libro PDF.</p>
+<p>Esta solución se basa en el formato de fragmentos de código de <em>R</em> para la mayoría de las imágenes, con algunas excepciones. Esta sintaxis <em>R Markdown</em> / <em>Bookdown</em> es más compleja que el formato de imagen <em>Markdown</em> básico, pero admite el formato condicional y los subtítulos en todas las ediciones, así como la numeración automática en las ediciones HMTL y <em>LaTeX</em>/ PDF. El formato general de imagen de los fragmentos de código de <em>R</em> se ve más o menos así:</p>
+<pre><code>...como se muestra en la Figura \@ref(fig: palabra-clave/ nombre de la imagen sin extensión).
+
+(ref: palabra-clave/ nombre de la imagen sin extensión) Leyenda con enlaces en formato _Markdown_, pero sin la posibilidad de establecer notas al pie.
+
+{r palabra-clave, fig.cap=&quot;(ref:palabra-clave)&quot;}
+if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;https://nombre-de-ruta-a-la-version-interactiva-palabra-clave-o-nombre-de-la-imagen-sin-extensión.html&quot;)
+else knitr::include_graphics(&quot;nombre-de-ruta-a-la-version-estatica-nombre-de-la-imagen.png&quot;)</code></pre>
+<p>Donde la primera línea genera una llamada de referencia cruzada de figura numerada automáticamente y en la que se puede hacer <em>click</em>. Notar además que la numeración automática aparece en formato de <em>figura x.x</em> en HTML, PDF, odt y doc, pero en formato <em>figura x</em> en <em>Markdown</em>. Esta llamada es importante porque las imágenes en la salida PDF “flotarán” por diseño y pueden aparecer antes o después de la página deseada.</p>
+<p>La segunda línea contiene el título con enlaces opcionales en formato <em>Markdown</em>. Pero no se debe insertar notas al pie con claves de citas de <em>Zotero</em>, ya que van a generar errores en la salida PDF. Las notas al pie detalladas sobre las fuentes de las imágenes, se deben insertar en el cuerpo del texto y usar el título solo para una breve mención de “Fuente:”</p>
+<p>El tercer bloque es el fragmento de código de <em>R</em>. En la práctica, el fragmento de código se separa de las otras dos líneas usando tres marcas de verificación de código, omitidas aquí por simplicidad. La primera parte hace referencia a la palabra clave en la llamada y también al título anterior. La última parte puede simplemente indicarle a <em>Bookdown</em> que incluya una imagen estática (cuando no hay una versión interactiva), o puede incluir una declaración <code>if-else</code> para formato condicional cuando existen versiones, tanto interactivas, como estáticas.</p>
+<p>La declaración <em>if</em> para la salida HTML contiene <code>(excludes = "markdown")</code> porque <em>Markdown</em> se considera un formato HTML, como se describe en el <a href="https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html"><em>R Markdown Cookbook</em></a>. Dado que la plataforma del editor aceptará una versión <em>Markdown</em> completa de la publicación, que muestra imágenes estáticas en lugar de visualizaciones interactivas, debemos generar el archivo “markdown” de manera diferente a la edición web HTML.</p>
+<p>Las etiquetas de fragmentos de código de <em>R</em> tienen que tener la misma palabra clave que el nombre del archivo de la imagen. Acá también hay que evitar usar etiquetas duplicadas para toda la publicación y usar solamente letras, números y guiones medios (no guiones bajos):</p>
+<pre><code>ref:palabra-clave-con-guiones
+
+images/07-ejemplo/nombre-de-la-imagen-con-guiones.png</code></pre>
+<p>Hay que prestar especial cuidado de forma de no insertar espacios dentro de la etiqueta <code>ref:palabra-clave-con-guiones</code> para el título. Pero sí es deseable agregar una línea en blanco para separarlo del fragmento de código. Después del fragmento de código, hay que agregar otra línea en blanco para evitar errores de tipo “ <em>undefined reference</em> ” (“referencia indefinida”).</p>
+<p>No es recomendable usar caracteres como <code>&lt;</code> o <code>&gt;</code> o <code>"</code> dentro del título de referencia del fragmento de código de <em>R</em>, ya que van a arrojar errores de HTML en las imágenes de salida de <em>Markdown</em>. En su lugar, se pueden usar caracteres como <code>*</code> y <code>-</code> para designar instrucciones, como por ejemplo: “Archivo - Hacer una copia.”</p>
+<p>Por último, en el archivo <code>index.Rmd</code> de todo proyecto de <em>Bookdown</em> es posible llevar a cabo una serie de configuraciones globales de fragmentos de código de <em>R</em>. Así, es recomendable que justo inmediatamente después del primer encabezado ( <code># Portada</code> en el caso de la publicación de este trabajo) se configure que toda imagen del proyecto que se inserte con fragmentos de código, lo haga sin “eco” . Esto quiere decir que solo se muestre la imagen y no el código utilizado para generar esa imagen. La otra configuración recomendable es la que inserta automáticamente la versión PDF de una imagen PNG/JPG (siempre que exista) en la salida PDF, lo que permite reducir manualmente el tamaño de las imágenes grandes que se muestran en el libro/ publicación PDF.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<div id="demostración-fragmento-de-código-de-r-para-imagen-estática-en-todas-las-ediciones-html-pdf-odt-docx-y-md" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Demostración: fragmento de código de <em>R</em> para imagen estática en todas las ediciones: HTML, PDF, ODT, DOCX y MD</h3>
+<p>…como se muestra en la Figura <a href="componer.html#fig:sample-image">2.1</a>.</p>
+
+<div class="figure"><span id="fig:sample-image"></span>
+<img src="images/sample-image.png" alt="Leyenda con enlaces en formato Markdown, pero sin la posibilidad de establecer notas al pie"  />
+<p class="caption">
+Figura 2.1: Leyenda con enlaces en formato <em>Markdown</em>, pero sin la posibilidad de establecer notas al pie
+</p>
+</div>
+<pre><code>
+...como se muestra en la Figura \@ref(fig:sample-image).
+
+Leyenda con enlaces en formato <em>Markdown</em>, pero sin la posibilidad de establecer notas al pieLeyenda con enlaces en formato _Markdown_, pero sin la posibilidad de establecer notas al pie
+
+  (```){r sample-image, fig.cap=&quot;Leyenda con enlaces en formato <em>Markdown</em>, pero sin la posibilidad de establecer notas al pie&quot;}
+    knitr::include_graphics(&quot;images/sample-image.png&quot;)
+  (```)
+
+* los paréntesis son ilustrativos y se tienen que eliminar para que el fragmento de código funcione
+</code></pre>
+</div>
+<div id="demostración-fragmento-de-código-de-r-para-iframe-en-html-e-imagen-estática-en-pdf-odt-docx-y-md" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Demostración: fragmento de código de <em>R</em> para iframe en HTML e imagen estática en PDF, ODT, DOCX y MD</h3>
+<p>…como se muestra en la Figura <a href="componer.html#fig:sample-map">2.2</a>.</p>
+
+<div class="figure"><span id="fig:sample-map"></span>
+<iframe src="https://www.openstreetmap.org/note/3023469" width="672" height="375px">
+</iframe>
+<p class="caption">
+Figura 2.2: Explorar el mapa interactivo de <a href="https://www.openstreetmap.org/note/3023469">OSM</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática.
+</p>
+</div>
+<pre><code>...como se muestra en la Figura \@ref(fig:sample-map).
+
+Explorar el mapa interactivo de <a href="https://www.openstreetmap.org/note/3023469">OSM</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática. Explorar el mapa interactivo de [OSM](https://www.openstreetmap.org/note/3023469). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática.
+
+(```){r sample-map, fig.cap=&quot;Explorar el mapa interactivo de <a href="https://www.openstreetmap.org/note/3023469">OSM</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática.&quot;}
+if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;https://www.openstreetmap.org/note/3023469&quot;, height = &quot;375px&quot;) else knitr::include_graphics(&quot;images/sample-map.png&quot;)
+(```)
+</code></pre>
+</div>
+<div id="demostración-fragmento-de-código-de-r-para-gif-animado-en-html-e-imagen-estática-en-pdf-odt-docx-y-md" class="section level3" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Demostración: fragmento de código de <em>R</em> para GIF animado en HTML e imagen estática en PDF, ODT, DOCX y MD</h3>
+<p>…como se muestra en la Figura <a href="componer.html#fig:sample-gif">2.3</a>.</p>
+
+<div class="figure"><span id="fig:sample-gif"></span>
+<iframe src="images/sample-gif.gif" width="672" height="250px">
+</iframe>
+<p class="caption">
+Figura 2.3: Ver un <a href="https://etalii.github.io/tepepub/images/sample.gif">GIF animado</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+</p>
+</div>
+<pre><code>
+...como se muestra en la Figura \@ref(fig:sample-gif).
+
+Ver un <a href="https://etalii.github.io/tepepub/images/sample.gif">GIF animado</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática Ver un [GIF animado](https://etalii.github.io/tepepub/images/sample.gif). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+
+(```){r sample-gif, fig.cap=&quot;Ver un <a href="https://etalii.github.io/tepepub/images/sample.gif">GIF animado</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática&quot;}
+if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;images/sample-gif.gif&quot;, height = &quot;250px&quot;) else knitr::include_graphics(&quot;images/sample-gif.png&quot;)
+(```)
+</code></pre>
+</div>
+<div id="demostración-fragmento-de-código-de-r-para-incrustar-video-en-html-e-imagen-estática-en-pdf-odt-docx-y-md" class="section level3" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Demostración: fragmento de código de <em>R</em> para incrustar video en HTML e imagen estática en PDF, ODT, DOCX y MD</h3>
+<p>Para esto hay que asegurarse de usar el enlace de inserción de <em>YouTube</em>, <em>Vimeo</em> o cualquiera sea la fuente del video en la web.</p>
+<p>…como se muestra en el Video <a href="componer.html#fig:sample-video">2.4</a></p>
+
+<div class="figure"><span id="fig:sample-video"></span>
+<iframe src="https://www.youtube.com/embed/dVqVscgwSpw" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figura 2.4: Ver un <a href="https://www.youtube.com/watch?v=dVqVscgwSpw">video en YouTube</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+</p>
+</div>
+<pre><code>...como se muestra en el Video \@ref(fig:sample-video)
+
+Ver un <a href="https://www.youtube.com/watch?v=dVqVscgwSpw">video en YouTube</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática Ver un [video en YouTube](https://www.youtube.com/watch?v=dVqVscgwSpw). Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática
+
+(```){r sample-video, fig.cap=&quot;Ver un <a href="https://www.youtube.com/watch?v=dVqVscgwSpw">video en YouTube</a>. Les lectorxs de ediciones que no sean HTML van a poder verlo de forma estática&quot;}
+if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;https://www.youtube.com/embed/dVqVscgwSpw&quot;) else knitr::include_graphics(&quot;images/sample-image2.png&quot;)
+(```)
+</code></pre>
+</div>
+<div id="manejo-de-tablas-en-formato-markdown" class="section level3" number="2.4.5">
+<h3><span class="header-section-number">2.4.5</span> Manejo de tablas en formato <em>Markdown</em></h3>
+<p>La creación de tablas en formato Markdown se puede gestionar mediante <a href="https://www.tablesgenerator.com/markdown_tables"><em>Tables Generator</em></a> que además de producir buenos resultados para HTML, PDF, odt, doc y <em>Markdown</em> permite importar datos de tablas en formato CSV.</p>
+<p>El código de la tabla <em>Markdown</em> que se muestra a continuación se tiene que agregar a la numeración automática (Tabla x) en HTML, PDF, odt y doc (Ver Tabla <a href="componer.html#tab:left-table">2.1</a>).</p>
+<table>
+<caption><span id="tab:left-table">Tabla 2.1: </span> Contenido alineado a izquierda. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido</caption>
+<colgroup>
+<col width="55%" />
+<col width="22%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Un encabezado muy muy largo</th>
+<th align="left">Encabezado corto</th>
+<th align="left">Encabezadito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Contenido alineado a la izquierda</td>
+<td align="left">número/ texto</td>
+<td align="left">número/ texto</td>
+</tr>
+<tr class="even">
+<td align="left">Se pueden usar guines para obtener columnas más grandes</td>
+<td align="left">número/ texto</td>
+<td align="left">número/ texto</td>
+</tr>
+</tbody>
+</table>
+<p>Se compone así:</p>
+<pre><code>
+...(Ver Tabla \@ref(tab:left-table)).
+
+Table: (\#tab:left-table) Contenido alineado a izquierda. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+
+| Un encabezado muy muy largo | Encabezado corto | Encabezadito |
+|:---------|:---|:---|
+| Contenido alineado a la izquierda | número/ texto | número/ texto |
+| Se pueden usar guines para obtener columnas más grandes | número/ texto | número/ texto |
+</code></pre>
+<p>Si queremos que el contenido esté alineado a la derecha como se muestra en la Tabla <a href="#tab:right-table">2.2</a></p>
+<p>Tabla: (#tab:right-table) Contenido alineado a la derecha. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">Encabezado1</th>
+<th align="right">Encabezado2</th>
+<th align="right">Encabezado3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">123</td>
+<td align="right">456</td>
+<td align="right">789</td>
+</tr>
+<tr class="even">
+<td align="right">Contenido alineado a la derecha</td>
+<td align="right">número/ texto</td>
+<td align="right">número/ texto</td>
+</tr>
+<tr class="odd">
+<td align="right">la misma cantidad de guiones</td>
+<td align="right">entre las columnas de la línea en blanco</td>
+<td align="right">garantiza mismo tamaño de columnas</td>
+</tr>
+</tbody>
+</table>
+<p>Se debe componer así:</p>
+<pre><code>
+...como se muestra en la Tabla \@ref(tab:right-table)
+
+Tabla: (\#tab:right-table) Contenido alineado a la derecha. Recordar dejar una fila en blanco entre los encabezados/ nombres de las columnas y el contenido
+
+| Encabezado1 | Encabezado2 | Encabezado3 |
+|-----:|-----:|-----:|
+| 123 | 456 | 789 |
+| Contenido alineado a la derecha | contenido numérico | contenido numérico |
+| la misma cantidad de guiones | entre las columnas de la línea en blanco | garantiza mismo tamaño de columnas |
+</code></pre>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>Para leer más sobre estas opciones, consultar la entrada en el capítulo de la documentación de <em>Bookdown</em>: <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a>.<a href="componer.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="compilar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["tepepub.pdf", "tepepub.epub", "tepepub.mobi"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

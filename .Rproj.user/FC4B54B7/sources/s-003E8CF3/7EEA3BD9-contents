@@ -1,0 +1,72 @@
+# Introducción: _Bookdown_ como herramienta de publicación ramificada {#intro}
+
+El flujo de trabajo que se propone a continuación, así como la composición, imposición y archivos digitales de este TPF, fueron realizados con herramientas de código abierto y de uso gratuito; principalmente _Bookdown_, _GitHub_ y _Zotero_. El objetivo de este trabajo es explicar y documentar el desarrollo de un proyecto editorial  que combina dichas herramientas en un flujo de trabajo basado en software libre y de acceso abierto, y que se orienta hacia un esquema de edición digital ramificada, descentralizada y distribuida.
+
+Así, los métodos propuestos en este trabajo se organizan en un flujo editorial ramificado que consta de tres grandes etapas: componer, compilar y publicar (ver Figura \@ref(fig:workflow) ). A grandes rasgos y a los efectos de este desarrollo, componer se refiere a producir los archivos fuente y darles formato en R [Markdown](https://es.wikipedia.org/wiki/Markdown), la versión del lenguaje de marcado _Markdown_ optimizada para el lenguaje de programación _R_; compilar consiste en aplicar un conjunto de comandos y fragmento de código de _R_ para imponer y generar los archivos de salida; mientras que publicar consiste en la disposición pública de la publicación en alguna plataforma y/o soporte.
+
+Es decir que, en el flujo de trabajo desarrollado, se combinan una forma particular de estructurar el proceso editorial a partir de la generación de un conjunto de archivos fuente y una metodología de concebir lo digital. Esta concepción apunta a que en un solo paso se generen múltiples publicaciones digitales para distintos propósitos, dispositivos y plataformas, a saber:
+
+- Archivo del código fuente de la publicación en formato de extensión .md (_Markdown_) completo con rutas de acceso a imágenes estáticas para una fácil conversión a la plataforma del editor. 
+- Edición web HMTL para el libro de acceso abierto, con _iframes_ integrados a gráficos, videos, _gifs_ y mapas interactivos.
+- Edición impuesta para imprenta, lectura digital en formato PDF enriquecido.
+- Edición en formato EPUB de acceso abierto, con _iframes_ integrados a gráficos, videos, _gifs_ y mapas interactivos.
+- Edición en formatos de extensión .doc (Microsoft Word) y .odt (Libreoffice) para obras derivadas, revisiones y comentarios.
+
+Entonces, a diferencia de lo que ocurre en un flujo de trabajo editorial de tipo lineal, que requiere de la creación de archivos y códigos distintos para diferentes tipos de ediciones y publicaciones; en el esquema del flujo de trabajo ramificado, la producción de los originales, el seguimiento del proceso editorial, la revisión, la corrección, las colaboraciones y el control de cambios, ocurren todos sobre un mismo archivo y de forma paralela.
+
+(ref:workflow) Esquema simplificado de las etapas generales del flujo de trabajo, componer, compilar y publicar en múltiples formatos
+
+```{r workflow, fig.cap="(ref:workflow)", auto_pdf= TRUE, out.width='80%', fig.asp=.75, fig.align='center'}
+knitr::include_graphics("images/workflow.png")
+```
+
+## Sobre Bookdown
+
+El flujo de trabajo está desarrollado en [Bookdown](https://bookdown.org), un paquete de código abierto para el lenguaje de programación [R](https://www.r-project.org/), creado por Yihui Xie para la aplicación de escritorio gratuita [RStudio](https://rstudio.com/). Aunque mucha gente usa _R_ para análisis estadístico, _RStudio_ también es compatible con varias soluciones de publicación ramificada. Así, los pasos que forman parte de las tres grandes etapas (componer, compilar y publicar) de este flujo de trabajo estan determinadas por _Bookdown_:
+
+1. Durante la etapa de composición: 
+
+- configuración de los archivos de _Bookdown_ de forma que cada capítulo/ sección conste de un archivo de _R Markdown_ (extensión .Rmd).
+
+- Organización de las citas, fuentes y referencias utilizando el administrador bibliográfico [Zotero](https://zotero.org/) desarrollado por el [Centro Roy Rosenzweig de Historia y Nuevos Medios de la Universidad George Mason](https://rrchnm.org/). Además, hay que instalar la extensión [Better BibTeX](https://github.com/retorquere/zotero-better-bibtex) para crear claves de citas en _Zotero_ compatibles con _Bookdown_.
+
+2. Durante la etapa de compilación:
+
+- Creación de los archivos de salida utilizando el conversor universal de documentos [PanDoc](https://pandoc.org/) y el software de preparación de documentos [LaTeX](https://www.latex-project.org/).
+
+- La capa de licenciamiento libre o abierto se puede configurar mediante una plantilla específica que se compile junto con el original. Esto se puede hacer incluso durante el proceso de escritura para hacer publicaciones parciales, generar capítulos promocionales, desarrollar la audiencia y hasta abrir la posibilidad de incorporar comentarios de lectorxs y colaboradores. Con las revisiones de cada jornada de trabajo se puede recompilar el libro, publicar las ediciones en el repositorio público de _GitHub_ y usar el [generador de sitios estáticos integrado](https://pages.github.com/) para alojar el formato web HTML de la publicación (libro/ publicación web).
+
+3. Durante la etapa de publicación:
+
+- Subida de los archivos fuente a un repositorio de [GitHub](https://github.com/) (repo), que además de hacer posible la disposición pública de la publicación en internet mediante un sitio web; permite al equipo editorial, conocer las versiones del texto que se generan (traducción, corrección, revisión, ramificación, reedición, erc), planificar el proyecto, seguir el desarrollo del proceso editorial y los autores, trabajar simultáneamente en el libro/ publicación en un repositorio común. 
+
+- Aplicar el modelo de [infraestructura como código](https://docs.microsoft.com/es-es/devops/deliver/what-is-infrastructure-as-code) para alojar el libro/ publicación web gratuitamente mediante _GitHub pages_. De esta forma, el sitio web que se genera, no solamente funciona como un producto editorial en sí, sino que además puede funcionar como interfaz de acceso al resto de las versiones de la publicación o ediciones (pdf, epub, mobi ,docx y md).
+
+Sin embargo, la descripción del flujo de trabajo desarrollado en _Bookdown_ que se hace aquí, no es exhaustiva y comprende solo un conjunto de elementos de análisis pertinentes a los contenidos del Seminario de Publicaciones Digitales. Para obtener más detalles técnicos sobre _Bookdown_ y ejemplos de otras publicaciones creadas con esta herramienta, se puede consultar https://bookdown.org ^[- Xie, Yihui. Bookdown: Authoring Books and Technical Documents with R Markdown. Chapman & Hall/CRC, 2018. https://bookdown.org/yihui/bookdown/. - Xie, Yihui, J. J. Allaire, and Garrett Grolemund. R Markdown: The Definitive Guide. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown/. - Xie, Yihui, Christophe Dervieux, and Emily Riederer. R Markdown Cookbook. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown-cookbook/.]. 
+
+
+- Xie, Yihui. Bookdown: Authoring Books and Technical Documents with R Markdown. Chapman & Hall/CRC, 2018. https://bookdown.org/yihui/bookdown/.
+
+- Xie, Yihui, J. J. Allaire, and Garrett Grolemund. R Markdown: The Definitive Guide. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown/.
+
+- Xie, Yihui, Christophe Dervieux, and Emily Riederer. R Markdown Cookbook. Chapman & Hall/CRC, 2020. https://bookdown.org/yihui/rmarkdown-cookbook/.
+
+
+## Cómo instalar y configurar Bookdown
+
+A continuación, se enumeran los pasos que hay que seguir para configurar la plataforma de publicación (_Bookdown_) y las herramientas relacionadas necesarias para compilar este trabajo, utilizando _Ubuntu 20.04_. Esto no requiere conocimientos especiales sobre _Linux_, de forma que los pasos para la instalación y la configuración en _Ubuntu_, si bien son diferentes, son similares a los que se deben seguir para _Windows_ y _MacOs_.
+
+1. Instalar el lenguaje de programación _R_, requerido para usar _Bookdown_.
+
+2. Instalar la versión gratuita de _RStudio Desktop_ para facilitar el uso de _R_ mediante la interfaz gráfica del editor de texto. Algunes autores componen sus textos directo en _RStudio_, pero es recomendable usar algún editor de texto (como [HedgeDoc](https://docutopia.tupale.co/) ), ya que estos suelen tener comandos, atajos y opciones específicas que hacen más ágil la escritura.
+
+3. Dentro de _RStudio_, dirigirse a la pestaña “ _Packages_ ” y seleccionar “ _Install_ ” ( [ver captura de pantalla](images/packages-install.png) ). 
+
+4. Dentro de _RStudio_, instalar el paquete " _bookdown_ " y seleccionar “ _Install Dependencies_ ” ( [ver captura de pantalla](images/bookdown-install.png) ).
+
+5. Para que _Bookdown_ cree la versión de la publicación en PDF hay que instalar un motor de [LaTeX](https://en.wikipedia.org/wiki/LaTeX) que transforme los formatos de las citas e imágenes de _Markdown_ a estilos de página preconfigurados. Dado que _LaTeX_ es muy pesado, la documentación de _Bookdown_ recomienda el paquete _TinyTeX_ que es más ligero. Para instalarlo, dentro de _RStudio_ hay que seleccionar la pestaña “ _Packages_ ”, seleccionar “ _Install_ ” y tipear " _tinytex_ " para buscar y cargar el paquete ( [ver captura de pantalla](images/tinytex-install.png) ).
+
+6. Para terminar de instalar " _tinytex_ " hay que escribir `tinytex :: install_tinytex ()` en la consola de RStudio y presionar “ _return_ ”. ( [ver captura de pantalla](images/tinytex-finish.png) )
+
+7. Junto con la instalación de _RStudio_, hay que instalar _Pandoc_, el paquete que convierte archivos del formato _Markdown_ a HMTL y otros formatos. Para confirmar la instalación de _Pandoc_ y el número de versión hay que escribir `rmarkdown :: pandoc_version ()` en la consola de _RStudio_, y presionar “ _return_ ”. El número de la versión instalada debe ser 2.3.1 o superior. Para instalar una versión más reciente de _Pandoc_, que es muy recomendable, dirigirse a https://pandoc.org.
+
